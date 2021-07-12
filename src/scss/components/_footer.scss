@@ -1,0 +1,9 @@
+@import "/src/scss/variables";
+
+.footer {
+    border: 1px solid $black;
+
+    .container {
+        display: flex;
+    }
+}
