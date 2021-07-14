@@ -1,11 +1,15 @@
 import Header from './Header';
 import Logo from './Logo';
 import Footer from './Footer';
-import FotoCard from './FotoCard';
+import PhotoBooths from './PhotoBooths';
+import Sliders from './Sliders';
+import FaqsBlock from './FaqsBlock';
 
 export {
     Header,
     Logo,
-    FotoCard,
     Footer,
+    PhotoBooths,
+    Sliders,
+    FaqsBlock,
 };

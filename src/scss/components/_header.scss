@@ -1,12 +1,78 @@
 @import "/src/scss/variables";
 
 .header {
-    border-bottom: 1px solid $grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-    .container {
+    &__logo {
+        padding: 10px 0 0 0;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    &__video-top {
+        max-height: 253px;
+
+        // svg {
+        //     padding: 0 10px;
+        // }
+    }
+
+    &__main-title {
+        margin: 18px 0 20px 0;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
+
+        h1 {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+
+            .colortext {
+                color: $red;
+            }
+        }
+
+        p {
+            line-height: 21px;
+        }
     }
+}
+
+.firsth-block__row,
+.second-block__row {
+    display: flex;
+    margin: 0 15px;
+}
+
+.firsth-block__column,
+.second-block__column {
+    flex: 0 1 50%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.firsth-block__item,
+.second-block__item {
+    padding: 30px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 16px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+}
+
+.ellipse {
+
+    filter: drop-shadow(0 0 7px $red);
 }

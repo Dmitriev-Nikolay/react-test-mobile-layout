@@ -1,9 +1,75 @@
 @import "/src/scss/variables";
 
 .footer {
-    border: 1px solid $black;
+    &__info {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 19px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: $red;
+        margin-bottom: 4px;
+    }
 
-    .container {
-        display: flex;
+    h2 {
+        font-family: "Roboto Slab Regular";
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 36px;
+        letter-spacing: 0em;
+        color: $black;
+        margin-bottom: 20px;
+    }
+
+    &__contacts {
+        list-style: none;
+
+        p {
+            font-family: "Roboto Slab Regular";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 32px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: $black;
+        }
+
+        span {
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 21px;
+            letter-spacing: 0em;
+            display: inline-block;
+            color: $text-secondary;
+            margin-bottom: 20px;
+
+            &::after {
+                content: "";
+                display: block;
+                width: 280px;
+                height: 1px;
+                background-color: #d5dae0;
+                margin-top: 20px;
+            }
+        }
+    }
+
+    &__tel,
+    &__address,
+    &__mail {
+        background-size: 24px 24px;
+        padding-left: 42px;
+    }
+
+    &__tel {
+        background: url("../../assets/svg/phone.svg") no-repeat;
+    }
+
+    &__address {
+        background: url("../../assets/svg/address.svg") no-repeat;
     }
 }
