@@ -1,0 +1,264 @@
+@import "/src/scss/variables";
+
+.popup-wrapper {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: $background-popup-news;
+    z-index: 100;
+}
+
+.popup-container {
+    min-width: 320px;
+    padding: 0 12px;
+    max-height: 540px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        width: 3px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $border-item-options;
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $background-popup-news;
+        border-radius: 10px;
+        border: 3px solid $grey;
+    }
+}
+
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/*----------------------- for news ------------------------------ */
+
+.current-news {
+    background: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 320px;
+    padding: 20px;
+    position: relative;
+
+    &__block-title-date {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 12px;
+    }
+
+    &__title {
+        font-family: "WorkSans Regular";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 16px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: $red;
+    }
+
+    &__date {
+        font-family: "WorkSans Regular";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 14px;
+        letter-spacing: 0em;
+        text-align: right;
+        color: $text-secondary;
+    }
+
+    &__general-title {
+        .title {
+            font-family: "WorkSans Regular";
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 28px;
+            letter-spacing: 0em;
+            text-align: justify;
+        }
+    }
+
+    &__description {
+        font-family: "WorkSans Regular";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 21px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+}
+
+/*----------------------- for booth ------------------------------ */
+
+.current-booth-for-order {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: $white;
+    padding: 16px;
+
+    &__title-order {
+        font-family: "Roboto Slab Regular";
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 42px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin-bottom: 32px;
+    }
+
+    &__current-options {
+        padding-right: 30px;
+        margin-bottom: 25px;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 280px;
+            height: 1px;
+            background-color: #d5dae0;
+            margin-top: 16px;
+        }
+    }
+
+    &__booth-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+
+        div {
+            display: flex;
+            flex-direction: column;
+
+            .title {
+                font-family: "WorkSans Regular";
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 18px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+
+            .size {
+                @extend .title;
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 14px;
+
+                .value-size {
+                    @extend .size;
+                    color: $text-secondary;
+                }
+            }
+        }
+
+        p {
+            font-family: "WorkSans Regular";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 18px;
+            letter-spacing: 0em;
+            text-align: right;
+        }
+    }
+
+    &__booth-day {
+        margin-bottom: 30px;
+    }
+
+    &__selected-options {
+        ul {
+            li {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 32px;
+
+                &:last-child {
+                    margin: 0;
+                }
+
+                p {
+                    font-family: "WorkSans Regular";
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 18px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                }
+
+                span {
+                    @extend p;
+                }
+            }
+        }
+    }
+
+    &__total {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 22px;
+
+        p {
+            font-family: "WorkSans Regular";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 23px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+
+        span {
+            font-family: "Roboto Slab Regular";
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 42px;
+            letter-spacing: 0em;
+            text-align: right;
+        }
+    }
+
+    &__phone {
+        margin-bottom: 12px;
+    }
+}
+
+/*----------------------- btn close popup ------------------------------ */
+
+.btn-close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    color: #8c8787;
+    font-size: 32px;
+    border-radius: 5px;
+}

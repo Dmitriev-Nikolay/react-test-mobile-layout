@@ -1,8 +1,7 @@
 import React from 'react';
 
-
-import phone from '../assets/svg/phone.svg';
-import address from '../assets/svg/address.svg';
+import myLogo from '../assets/img/My_logo.png';
+import up from '../assets/svg/up.svg';
 
 const Footer = () => {
     const scrollToTop = () => {
@@ -31,6 +30,17 @@ const Footer = () => {
                         <span>Info@test.ru</span>
                     </li>
                 </ul>
+                <div className="footer__dev">
+                    <span>Разработка приложения:</span>
+                    <a href="https://github.com/Dmitriev-Nikolay" target="_blank" rel="noreferrer">
+                        <img width="40" src={ myLogo } alt="My logo" />
+                    </a>
+                </div>
+                <div className="footer__up" onClick={ scrollToTop }>
+                    <p>вверх</p>
+                    <img src={ up } alt="up" />
+                    <p>вверх</p>
+                </div>
             </div>
         </div>
     );

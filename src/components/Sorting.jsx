@@ -1,11 +1,11 @@
 import React from 'react';
 
-const FaqsBlock = () => {
+const Sorting = () => {
     return (
         <div>
-            FAQS
+            
         </div>
     );
 };
 
-export default FaqsBlock;
+export default Sorting;

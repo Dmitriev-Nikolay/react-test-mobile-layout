@@ -1,0 +1,29 @@
+@import "/src/scss/variables";
+
+.photo-booths {
+    display: flex;
+    flex-direction: column;
+
+    &__sort {
+        span {
+            font-family: "WorkSans Regular";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 16px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: $text-secondary;
+        }
+
+        svg {
+            margin-left: 12px;
+            transform: rotate(0);
+
+            &.rotate {
+                transform: rotate(180deg);
+                stroke: $red;
+            }
+        }
+    }
+}

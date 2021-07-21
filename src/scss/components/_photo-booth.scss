@@ -1,0 +1,44 @@
+.photo-booth {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 15px 10px -4px rgb(50 50 50 / 5%);
+    padding: 16px 0 18px 0;
+    margin-bottom: 20px;
+
+    &__desc {
+        margin-bottom: 24px;
+
+        .title {
+            font-family: "WorkSans Regular";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 23px;
+            letter-spacing: 0em;
+            text-align: left;
+            margin-bottom: 5px;
+        }
+
+        .size {
+            font-family: "WorkSans Regular";
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 14px;
+            letter-spacing: 0em;
+            text-align: left;
+
+            &__value {
+                font-family: "WorkSans Regular";
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 14px;
+                letter-spacing: 0em;
+                text-align: center;
+                color: #6a6a6a;
+            }
+        }
+    }
+}

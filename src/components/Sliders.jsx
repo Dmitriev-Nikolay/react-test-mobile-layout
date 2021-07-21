@@ -1,42 +1,19 @@
 import React from 'react';
-
-import Slider from "react-slick";
+import ImageGallery from 'react-image-gallery';
 
 const Sliders = (props) => {
-    // const { sliderImgs } = props;
-
-    let settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1
-    };
-
+    const { sliderImgs } = props;
     return (
         <>
-            <Slider {...settings}>
-                <div>
-                    <h3>1</h3>
-                </div>
-                <div>
-                    <h3>2</h3>
-                </div>
-                <div>
-                    <h3>3</h3>
-                </div>
-                <div>
-                    <h3>4</h3>
-                </div>
-                <div>
-                    <h3>5</h3>
-                </div>
-                <div>
-                    <h3>6</h3>
-                </div>
-            </Slider>
+            <ImageGallery
+                items={ sliderImgs }
+                showPlayButton={ false }
+                showFullscreenButton={ false }
+                showBullets={ true }
+                showThumbnails={ false }
+            />
         </>
-    );
-};
+    )
+}
 
 export default Sliders;

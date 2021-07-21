@@ -10,31 +10,20 @@
     align-items: center;
     justify-content: center;
     min-height: 100%;
-    
+    overflow-x: hidden;
+    overflow-y: auto;
     font-family: "WorkSans Regular";
 }
 
 .container {
-    max-width: 375px;
+    max-width: 360px;
     padding: 0 16px;
-    border: 1px solid $black;
+}
+
+h1 {
+    margin-bottom: 20px;
 }
 
 .content {
-    padding: 40px 0;
-
-    &__title {
-        margin: 35px 0;
-    }
-
-    &__items {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    &__top {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
+    margin-bottom: 60px;
 }

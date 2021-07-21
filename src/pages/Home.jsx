@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { PhotoBooths } from '../components';
-import { FaqsBlock } from '../components';
+import { PhotoBooths, FaqsMenu, News } from '../components';
 
 const Home = React.memo(() => {
 
@@ -9,9 +8,9 @@ const Home = React.memo(() => {
 
         <div className="content">
             <div className="container">
-                <h1>Фотобудки</h1>
                 <PhotoBooths />
-                <FaqsBlock />
+                <FaqsMenu />
+                <News />
             </div>
         </div>
     );

@@ -1,10 +1,12 @@
 import React from 'react';
 
-import { Logo } from '../components';
+import { Logo, Popup } from '../components';
 
 import groupballs from '../assets/img/groupballs.png';
 import rectangle from '../assets/img/rectangle.png';
 import ellipse from '../assets/img/ellipse.png';
+import videoBackground from '../assets/img/bg-video.png';
+import videoPlay from '../assets/img/video-play.png';
 
 import mask from '../assets/svg/mask.svg';
 import infiniti from '../assets/svg/infiniti.svg';
@@ -12,18 +14,29 @@ import ticket from '../assets/svg/ticket.svg';
 import photo from '../assets/svg/photo.svg';
 
 const Header = () => {
+
+    const [visibleVideo, setVisibleVideo] = React.useState(false); // default hidden
+    const [youtubeID] = React.useState('rClXqZD2Xrs');
+    
+    const playVideo = () => {
+        setVisibleVideo(true);
+        document.body.style.overflow = "hidden"; // do not scroll the body
+    };
+
     return (
         <header className="header">
             <div className="container">
                 <Logo />
-                <section className="header__video-top">
+                <section className="header__video-top" onClick={ playVideo }>
                     <svg width="100%" height="100%" viewBox="-18 -20 360 263"
                         xmlns="http://www.w3.org/2000/svg"
                         xmlnsXlink="http://www.w3.org/1999/xlink">
-                        <image xlinkHref={rectangle} x="0" y="0" />
-                        <image xlinkHref={groupballs} x="255" y="-10" width="82" height="44" />
-                        <image className="ellipse" xlinkHref={ellipse} x="-7" y="125" width="105px" height="105px" />
+                        <image xlinkHref={ rectangle } x="0" y="0"/>
+                        <image xlinkHref={ groupballs } x="255" y="-10" width="82" height="44"/>
+                        <image className="ellipse" xlinkHref={ ellipse } x="-7" y="125" width="105px" height="105px"/>
                     </svg>
+                    <img className="video-background" src={ videoBackground } alt="video"/>
+                    <img className="video-play" src={ videoPlay } alt="play"/>
                 </section>
                 <section className="header__main-title">
                     <h1>
@@ -40,13 +53,17 @@ const Header = () => {
                         <div className="firsth-block__row">
                             <div className="firsth-block__column">
                                 <div className="firsth-block__item">
-                                    <img src={infiniti} alt="infiniti" />
+                                    <div>
+                                        <img src={ infiniti } alt="infiniti" />
+                                    </div>
                                     <p>Безлимитная печать фото</p>
                                 </div>
                             </div>
                             <div className="firsth-block__column">
                                 <div className="firsth-block__item">
-                                    <img src={mask} alt="mask" />
+                                    <div>
+                                        <img src={ mask } alt="mask" />
+                                    </div>    
                                     <p>Фотореквизит в наличии</p>
                                 </div>
                             </div>
@@ -56,42 +73,36 @@ const Header = () => {
                         <div className="second-block__row">
                             <div className="second-block__column">
                                 <div className="second-block__item">
-                                    <div className="second-block__item-photo">
-                                        <img src={photo} alt="photo" />
+                                    <div>
+                                        <img src={ photo } alt="cards" />
                                     </div>
                                     <p>Фотоотчет в электронном виде</p>
                                 </div>
                             </div>
                             <div className="second-block__column">
                                 <div className="second-block__item">
-                                    {/* <div className="second-block__item-photo"> */}
-                                    <img src={ticket} alt="ticket" />
-                                    {/* </div> */}
+                                    <div>
+                                        <img src={ ticket } alt="ticket" />
+                                    </div>
                                     <p>Цены ниже рынка</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    {/* <ul className="features-list">
-                        <li>
-                            <img src={infiniti} alt="infiniti" />
-                            <p>Безлимитная печать фото</p>
-                        </li>
-                        <li>
-                            <img src={mask} alt="mask" />
-                            <p>Фотореквизит в наличии</p>
-                        </li>
-                        <li>
-                            <img src={photo} alt="photo" />
-                            <p>Фотоотчет в электронном виде</p>
-                        </li>
-                        <li>
-                            <img src={ticket} alt="ticket" />
-                            <p>Цены ниже рынка</p>
-                        </li>
-                    </ul> */}
                 </section>
+                { 
+                    visibleVideo &&  
+                    <Popup 
+                        visible={ visibleVideo } 
+                        setVisible={ setVisibleVideo }
+                    >
+                        <iframe className='video'
+                            title='Youtube player'
+                            sandbox='allow-same-origin allow-forms allow-popups allow-scripts allow-presentation'
+                            src={ `https://youtube.com/embed/${ youtubeID }?autoplay=0` }>
+                        </iframe>
+                    </Popup>         
+                } 
             </div>
         </header>
     );
