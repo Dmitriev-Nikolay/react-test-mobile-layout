@@ -5,12 +5,13 @@ import PhotoBooths from './PhotoBooths';
 import PhotoBooth from './PhotoBooth';
 import Sliders from './Sliders';
 import Options from './Options';
-import Sorting from './Sorting';
 import FaqsMenu from './FaqsMenu';
 import FaqsItem from './FaqsItem';
 import News from './News';
 import NewsItem from './NewsItem';
 import Popup from './Popup';
+import CheckboxOptionTypes from './CheckboxOptionTypes';
+import RadioOptionTimes from './RadioOptionTimes';
 
 export {
     Header,
@@ -20,10 +21,11 @@ export {
     PhotoBooth,
     Sliders,
     Options,
-    Sorting,
     FaqsMenu,
     FaqsItem,
     News,
     NewsItem,
     Popup,
+    CheckboxOptionTypes,
+    RadioOptionTimes,
 };

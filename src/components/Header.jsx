@@ -14,9 +14,8 @@ import ticket from '../assets/svg/ticket.svg';
 import photo from '../assets/svg/photo.svg';
 
 const Header = () => {
-
     const [visibleVideo, setVisibleVideo] = React.useState(false); // default hidden
-    const [youtubeID] = React.useState('rClXqZD2Xrs');
+    const [youtubeID] = React.useState('Q6nepw3fskg');
     
     const playVideo = () => {
         setVisibleVideo(true);

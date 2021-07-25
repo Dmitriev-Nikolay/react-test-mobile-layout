@@ -11,7 +11,7 @@ const PhotoBooths = () => {
     const [isActiveSort, setIsActiveSort] = React.useState(false);
     const [sortBooths, setSortableBooths] = React.useState(data.allPhotoBooths.booths);
 
-    const sort = () => {
+    const sortingBooths = () => {
         const copyBooths = [...data.allPhotoBooths.booths];
         const sortableBooths = copyBooths.sort((first, second) => {
             switch (isActiveSort) {
@@ -29,7 +29,7 @@ const PhotoBooths = () => {
             <h1>Фотобудки</h1>
             <div className="photo-booths__sort">
                 <b>Сортировка: </b>
-                <span onClick={ sort }>По возрастанию</span>
+                <span onClick={ sortingBooths }>По возрастанию</span>
                 <svg className={ classNames({
                     "rotate": isActiveSort,
                     "": !isActiveSort,
@@ -56,7 +56,7 @@ const PhotoBooths = () => {
                 sortBooths.map((booths, index) => {
                     return (
                         <PhotoBooth
-                            key={ booths.id }
+                            key={ `${ index }_${ booths.id }` }
                             photoBoothsId={ booths.id }
                             number={ booths.id }
                             title={ booths.title }

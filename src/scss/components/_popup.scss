@@ -11,14 +11,14 @@
     height: 100vh;
     background: $background-popup-news;
     z-index: 100;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .popup-container {
     min-width: 320px;
     padding: 0 12px;
     max-height: 540px;
-    overflow-x: hidden;
-    overflow-y: auto;
 
     &::-webkit-scrollbar {
         width: 3px;
@@ -40,12 +40,12 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    background: $white;
 }
 
 /*----------------------- for news ------------------------------ */
 
 .current-news {
-    background: $white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -110,7 +110,6 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    background: $white;
     padding: 16px;
 
     &__title-order {
@@ -125,7 +124,6 @@
     }
 
     &__current-options {
-        padding-right: 30px;
         margin-bottom: 25px;
 
         &::after {
@@ -143,10 +141,12 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: 10px;
+        padding-right: 8px;
 
         div {
             display: flex;
             flex-direction: column;
+            justify-content: flex-start;
 
             .title {
                 font-family: "WorkSans Regular";
@@ -188,11 +188,34 @@
 
     &__selected-options {
         ul {
+            display: flex;
+            flex-direction: column;
+            max-height: 185px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            margin: 10px 0;
+            padding: 5px 0;
+
+            &::-webkit-scrollbar {
+                width: 3px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: $border-item-options;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: $background-popup-news;
+                border-radius: 20px;
+                border: 3px solid $background-popup-news;
+            }
+
             li {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 margin-bottom: 32px;
+                padding-right: 5px;
 
                 &:last-child {
                     margin: 0;
@@ -244,6 +267,64 @@
 
     &__phone {
         margin-bottom: 12px;
+        position: relative;
+
+        input {
+            width: 100%;
+            min-height: 40px;
+            border-color: $red;
+            border-radius: 5px;
+            text-indent: 10px;
+        }
+
+        div {
+            position: absolute;
+            top: 6px;
+            right: 8px;
+            padding: 4px 12px;
+            border-radius: 5px;
+            background: $light-grey;
+
+            span {
+                font-family: "WorkSans Regular";
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 16px;
+                letter-spacing: 0em;
+                text-align: center;
+            }
+
+            svg {
+                margin-left: 5px;
+            }
+        }
+    }
+
+    button {
+        width: 100%;
+        min-height: 40px;
+        color: $white;
+        background: $red;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        cursor: pointer;
+        font-family: "Roboto";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 21px;
+        letter-spacing: 0em;
+        text-align: center;
+
+        &:hover {
+            background: $dark-red;
+        }
+
+        &:active {
+            transform: translate(1px, 1px);
+        }
     }
 }
 

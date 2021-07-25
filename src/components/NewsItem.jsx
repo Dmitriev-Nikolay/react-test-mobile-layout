@@ -2,7 +2,7 @@ import React from 'react';
 
 import news from '../assets/img/news.jpg';
 
-const NewsItem = (props) => {
+const NewsItem = React.memo((props) => {
     const { type, title, desc, date, newsNumber, clickForView } = props;
 
     const view = () => {
@@ -13,7 +13,7 @@ const NewsItem = (props) => {
     return (
         <div className="news-item" onClick={ view }>
             <div className="news-item__img">
-                <img src={ news } alt="news" />
+                <img src={ news } alt="news"/>
             </div>
             <div className="news-item__info-block">
                 <h6 className="news-item__type">{ type }</h6>
@@ -23,6 +23,6 @@ const NewsItem = (props) => {
             </div>
         </div>
     );
-};
+});
 
 export default NewsItem;

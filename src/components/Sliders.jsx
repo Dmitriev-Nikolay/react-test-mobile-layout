@@ -1,7 +1,7 @@
 import React from 'react';
 import ImageGallery from 'react-image-gallery';
 
-const Sliders = (props) => {
+const Sliders = React.memo((props) => {
     const { sliderImgs } = props;
     return (
         <>
@@ -13,7 +13,7 @@ const Sliders = (props) => {
                 showThumbnails={ false }
             />
         </>
-    )
-}
+    );
+});
 
 export default Sliders;

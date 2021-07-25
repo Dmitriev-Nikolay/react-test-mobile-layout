@@ -1,7 +1,7 @@
 import React from 'react';
 
 import myLogo from '../assets/img/My_logo.png';
-import up from '../assets/svg/up.svg';
+import upIcon from '../assets/svg/up.svg';
 
 const Footer = () => {
     const scrollToTop = () => {
@@ -38,7 +38,7 @@ const Footer = () => {
                 </div>
                 <div className="footer__up" onClick={ scrollToTop }>
                     <p>вверх</p>
-                    <img src={ up } alt="up" />
+                    <img src={ upIcon } alt="up" />
                     <p>вверх</p>
                 </div>
             </div>

@@ -2,14 +2,14 @@ import React from 'react';
 
 import classNames from 'classnames';
 
-const FaqsItem = (props) => {
+const FaqsItem = React.memo((props) => {
     const { title, content } = props;
 
     const [isActive, setIsActive] = React.useState(false);
 
     const viewFaqItem = () => {
         setIsActive(!isActive);
-    }
+    };
 
     return (
         <div className="faqs__items__item">
@@ -45,6 +45,6 @@ const FaqsItem = (props) => {
             <div className="faqs__items__item__content">{ isActive && content }</div>
         </div>
     );
-};
+});
 
 export default FaqsItem;

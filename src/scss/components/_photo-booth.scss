@@ -41,4 +41,46 @@
             }
         }
     }
+
+    &__send {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        p {
+            font-family: "Roboto Slab Regular";
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 42px;
+            letter-spacing: 0em;
+        }
+
+        button {
+            min-width: 167px;
+            min-height: 40px;
+            color: $white;
+            background: $red;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+
+            font-family: "Roboto";
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 21px;
+            letter-spacing: 0em;
+            text-align: center;
+
+            &:hover {
+                background: $dark-red;
+            }
+
+            &:active {
+                transform: translate(1px, 1px);
+            }
+        }
+    }
 }
