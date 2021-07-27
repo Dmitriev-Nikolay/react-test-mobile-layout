@@ -5,7 +5,7 @@ import mainLogo from '../assets/svg/main_logo.svg';
 const Logo = () => {
     return (
         <div className="header__logo">
-            <img width="63" src={ mainLogo } alt="Main logo"/>
+            <img src={ mainLogo } alt="Main logo" width="63" height="60"/>
         </div>
     );
 };

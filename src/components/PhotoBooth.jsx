@@ -3,23 +3,33 @@ import React from 'react';
 import { Sliders, Options, Popup, SelectOptionsTimes } from '../components';
 
 import data from '../data';
-import photo from '../assets/img/photo.png';
+import photo from '../assets/img/photo.jpg';
 
 const sliderImgs = [
     {
         original: photo,
+        originalWidth: 328,
+        originalHeight: 240,
     },
     {
         original: photo,
+        originalWidth: 328,
+        originalHeight: 240,
     },
     {
         original: photo,
+        originalWidth: 328,
+        originalHeight: 240,
     },
     {
         original: photo,
+        originalWidth: 328,
+        originalHeight: 240,
     },
     {
         original: photo,
+        originalWidth: 328,
+        originalHeight: 240,
     }
 ];
 

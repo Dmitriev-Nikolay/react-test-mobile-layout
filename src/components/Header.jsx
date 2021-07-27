@@ -32,10 +32,10 @@ const Header = () => {
                         xmlnsXlink="http://www.w3.org/1999/xlink">
                         <image xlinkHref={ rectangle } x="0" y="0"/>
                         <image xlinkHref={ groupballs } x="255" y="-10" width="82" height="44"/>
-                        <image className="ellipse" xlinkHref={ ellipse } x="-7" y="125" width="105px" height="105px"/>
+                        <image className="ellipse" xlinkHref={ ellipse } x="-7" y="125" width="105" height="105"/>
                     </svg>
-                    <img className="video-background" src={ videoBackground } alt="video"/>
-                    <img className="video-play" src={ videoPlay } alt="play"/>
+                    <img className="video-background" src={ videoBackground } alt="video" width="285" height="170"/>
+                    <img className="video-play" src={ videoPlay } alt="play" width="70" height="70"/>
                 </section>
                 <section className="header__main-title">
                     <h1>
@@ -53,7 +53,7 @@ const Header = () => {
                             <div className="firsth-block__column">
                                 <div className="firsth-block__item">
                                     <div>
-                                        <img src={ infiniti } alt="infiniti" />
+                                        <img src={ infiniti } alt="infiniti" width="42" height="21"/>
                                     </div>
                                     <p>Безлимитная печать фото</p>
                                 </div>
@@ -61,7 +61,7 @@ const Header = () => {
                             <div className="firsth-block__column">
                                 <div className="firsth-block__item">
                                     <div>
-                                        <img src={ mask } alt="mask" />
+                                        <img src={ mask } alt="mask" width="48" height="48"/>
                                     </div>    
                                     <p>Фотореквизит в наличии</p>
                                 </div>
@@ -73,7 +73,7 @@ const Header = () => {
                             <div className="second-block__column">
                                 <div className="second-block__item">
                                     <div>
-                                        <img src={ photo } alt="cards" />
+                                        <img src={ photo } alt="cards" width="41" height="34"/>
                                     </div>
                                     <p>Фотоотчет в электронном виде</p>
                                 </div>
@@ -81,7 +81,7 @@ const Header = () => {
                             <div className="second-block__column">
                                 <div className="second-block__item">
                                     <div>
-                                        <img src={ ticket } alt="ticket" />
+                                        <img src={ ticket } alt="ticket" width="35" height="35"/>
                                     </div>
                                     <p>Цены ниже рынка</p>
                                 </div>

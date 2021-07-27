@@ -13,6 +13,7 @@ import Popup from './Popup';
 import CheckboxOptionTypes from './CheckboxOptionTypes';
 import RadioOptionTimes from './RadioOptionTimes';
 import SelectOptionsTimes from './SelectOptionsTimes';
+import YandexCard from './YandexCard';
 
 export {
     Header,
@@ -30,4 +31,5 @@ export {
     CheckboxOptionTypes,
     RadioOptionTimes,
     SelectOptionsTimes,
+    YandexCard,
 };

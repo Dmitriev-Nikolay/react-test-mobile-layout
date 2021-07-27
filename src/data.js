@@ -1,4 +1,4 @@
-import photo from './assets/img/photo.png';
+import photo from './assets/img/photo.jpg';
 
 const data = {
     allNews: {
