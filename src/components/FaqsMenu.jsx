@@ -3,6 +3,7 @@ import React from 'react';
 import { FaqsItem } from '../components';
 
 const FaqsMenu = () => {
+
     const accordionData = {
         title: 'Какой реквизит идет в комплекте?',
         content: `Какой то текст для заголовка Какой 

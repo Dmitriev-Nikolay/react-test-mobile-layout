@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Sliders, Options, Popup } from '../components';
+import { Sliders, Options, Popup, SelectOptionsTimes } from '../components';
 
 import data from '../data';
 import photo from '../assets/img/photo.png';
@@ -29,8 +29,8 @@ const PhotoBooth = React.memo((props) => {
     const [isOpenOrderForm, setIsOpenOrderForm] = React.useState(false); // default hidden
     const [finalPriceObj, setFinalPriceObj] = React.useState(null);
     const [finalPrice, setFinalPrice] = React.useState(0);
-    const [orderedBooth, setOrderedBooth] = React.useState({});
     const [selectedOptions, setSelectedOptions] = React.useState([]);
+    const [selectedTime, setSelectedTime] = React.useState(null);
 
     React.useEffect(() => { // when loading, we will set the base price of the booth for 1 hour
         setFinalPriceObj({
@@ -46,14 +46,9 @@ const PhotoBooth = React.memo((props) => {
     const handleLeaveRequest = () => {
         setIsOpenOrderForm(true) // visible on
         document.body.style.overflow = "hidden"; // do not scroll the body
-        const orderBooth = {
-            finalPrice,
-            selectedOptions,
-        };
-        setOrderedBooth(orderBooth);
     };
 
-    const calculateTotalPrice = (valuePriceType, checkedCheckbox, type) => {
+    const calculateTotalPrice = (valuePriceType, checkedCheckbox, titleOption, type) => {
         switch (type) {
             case 'checkbox':
                 let objTypePrice = finalPriceObj;
@@ -68,16 +63,23 @@ const PhotoBooth = React.memo((props) => {
             case 'radio':
                 let objTimePrice = finalPriceObj;
                 objTimePrice.baseBoothPrice = valuePriceType;
+                setSelectedTime(valuePriceType); // for popup select time option
                 setFinalPriceObj(objTimePrice);
                 setFinalPrice(Object.values(objTimePrice).reduce((allPrice, elemPrice) => allPrice += elemPrice));
                 break;
-            default: break;
+            default: 
+                let objTimePriceSelect = finalPriceObj;
+                objTimePriceSelect.baseBoothPrice = valuePriceType;
+                setFinalPriceObj(objTimePriceSelect);
+                let allPrice = Object.values(objTimePriceSelect).reduce((allPrice, elemPrice) => allPrice += elemPrice);
+                setFinalPrice(allPrice);
+                break;
         };
     };
 
     return (
         <div className="photo-booth">
-            <Sliders sliderImgs={ sliderImgs } />
+            <Sliders sliderImgs={ sliderImgs }/>
             <div className="photo-booth__desc">
                 <h3 className="title">{ title } № { number }</h3>
                 <p className="size">Размер: <span className="size__value">{ size }</span></p>
@@ -92,7 +94,7 @@ const PhotoBooth = React.memo((props) => {
                 getTotalPrice={ calculateTotalPrice }
             />
             <div className="photo-booth__send">
-                <p>{ 'From number:', finalPrice.toLocaleString('ru-RU') } ₽</p>
+                <p>{ finalPrice.toLocaleString('ru-RU') } ₽</p>
                 <button onClick={ handleLeaveRequest }>Оставить заявку</button>
             </div>
             {
@@ -112,19 +114,17 @@ const PhotoBooth = React.memo((props) => {
                                     <p className="size">Размер: <span className="value-size">2м x 1.5м x 2 м</span></p>
                                 </div>
                                 <div>
-                                    <p>{ 'From number:', price.toLocaleString('ru-RU') } ₽</p>
+                                    <p>{ price.toLocaleString('ru-RU') } ₽</p>
                                 </div>
                             </div>
-                            <div className="current-booth-for-order__booth-day">
-                                <select>
-                                    {
-                                        data.allOptions.optionsTimes.map((selectTime, index) => {
-                                            return (
-                                                <option>{ selectTime.title }</option>
-                                            )
-                                        })
-                                    }
-                                </select>
+                            <div className="current-booth-for-order__booth-times">
+                                <SelectOptionsTimes 
+                                    optionsSelectTimes={ data.allOptions.optionsTimes }
+                                    idPhotoBooths={ photoBoothsId }
+                                    priceCurrentBooth={ price }
+                                    selectedTime={ selectedTime }
+                                    getTotalPrice={ calculateTotalPrice }
+                                />
                             </div>
                             <div className="current-booth-for-order__selected-options">
                                 <ul>
@@ -134,7 +134,7 @@ const PhotoBooth = React.memo((props) => {
                                                 return (
                                                     <li key={ `${ index }_${ option.optionTypesPrice }` }>
                                                         <p>{ option.optionTypesTitle } # { option.optionTypesId }</p>
-                                                        <span>{ 'From number:', option.optionTypesPrice.toLocaleString('ru-RU') } ₽</span>
+                                                        <span>{ option.optionTypesPrice.toLocaleString('ru-RU') } ₽</span>
                                                     </li>
                                                 )
                                             })
@@ -147,15 +147,15 @@ const PhotoBooth = React.memo((props) => {
                         </div>
                         <div className="current-booth-for-order__total">
                             <p>Итого:</p>
-                            <span>{ 'From number:', orderedBooth.finalPrice.toLocaleString('ru-RU') } ₽</span>
+                            <span>{ finalPrice.toLocaleString('ru-RU') } ₽</span>
                         </div>
                         <form>
                             <div className="current-booth-for-order__phone">
-                                <input type="tel" placeholder="+7(000)000-00-00" pattern="[\+()]*(?:\d[\s\-\.()xX]*){10,14}" required />
+                                <input type="tel" placeholder="+7 (000) 000-00-00" pattern="[\+()]*(?:\d[\s\-\.()xX]*){10,14}" required/>
                                 <div>
                                     <span>Позвоните мне</span>
                                     <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1.66666 0.999918L6.99999 6.33325L12.3333 0.999918" stroke="#131313" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M1.66666 0.999918L6.99999 6.33325L12.3333 0.999918" stroke="#131313" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                                     </svg>
                                 </div>
                             </div>

@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { CheckboxOptionTypes } from '../components';
-import { RadioOptionTimes } from '../components';
+import { CheckboxOptionTypes, RadioOptionTimes } from '../components';
 
 const Options = React.memo((props) => {
     const { optionsTypes, optionsTimes, idPhotoBooths, priceCurrentBooth, selectedOptions, setSelectedOptions, getTotalPrice } = props;

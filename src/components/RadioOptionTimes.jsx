@@ -2,6 +2,7 @@ import React from 'react';
 
 const RadioOptionTimes = React.memo((props) => {
     const { indexForDefaultChecked, optionTimesId, optionTimesTitle, optionTimesPrice, idPhotoBooths, priceCurrentBooth, calcTotalPrice } = props;
+
     const [currentValue, setCurrentValue] = React.useState(optionTimesPrice + priceCurrentBooth);
 
     const handleChangeRadio = (e) => {
@@ -9,8 +10,8 @@ const RadioOptionTimes = React.memo((props) => {
         setCurrentValue(value);
     };
 
-    const getFinalPriceBooth = (price, check, type) => {
-        calcTotalPrice(price, check, type);
+    const getFinalPriceBooth = (price, check, title, type) => {
+        calcTotalPrice(price, check, title, type);
     };
 
     return (
@@ -23,7 +24,7 @@ const RadioOptionTimes = React.memo((props) => {
                 value={ optionTimesPrice + priceCurrentBooth }
                 onChange={ (e) => handleChangeRadio(e) }
                 onClick={(e) => {
-                    getFinalPriceBooth(currentValue, e.currentTarget.checked, e.currentTarget.type);
+                    getFinalPriceBooth(currentValue, e.currentTarget.checked, optionTimesTitle, e.currentTarget.type);
                 }}
             />
             <label htmlFor={ `${ optionTimesId }_${ idPhotoBooths }` }>

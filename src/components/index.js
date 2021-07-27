@@ -12,6 +12,7 @@ import NewsItem from './NewsItem';
 import Popup from './Popup';
 import CheckboxOptionTypes from './CheckboxOptionTypes';
 import RadioOptionTimes from './RadioOptionTimes';
+import SelectOptionsTimes from './SelectOptionsTimes';
 
 export {
     Header,
@@ -28,4 +29,5 @@ export {
     Popup,
     CheckboxOptionTypes,
     RadioOptionTimes,
+    SelectOptionsTimes,
 };

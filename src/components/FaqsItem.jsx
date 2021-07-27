@@ -1,5 +1,4 @@
 import React from 'react';
-
 import classNames from 'classnames';
 
 const FaqsItem = React.memo((props) => {

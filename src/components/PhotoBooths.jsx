@@ -1,5 +1,4 @@
 import React from 'react';
-
 import classNames from 'classnames';
 
 import { PhotoBooth } from '../components';
@@ -7,7 +6,7 @@ import { PhotoBooth } from '../components';
 import data from '../data'; // || React.useEffect -> axios -> get -> data
 
 const PhotoBooths = () => {
-
+    
     const [isActiveSort, setIsActiveSort] = React.useState(false);
     const [sortBooths, setSortableBooths] = React.useState(data.allPhotoBooths.booths);
 
@@ -15,8 +14,8 @@ const PhotoBooths = () => {
         const copyBooths = [...data.allPhotoBooths.booths];
         const sortableBooths = copyBooths.sort((first, second) => {
             switch (isActiveSort) {
-                case true: return first.price < second.price ? 1 : -1; // по убыванию
-                case false: return first.price < second.price ? -1 : 1; // по возрастанию
+                case false: return first.price < second.price ? 1 : -1; // по возрастанию
+                case true: return first.price < second.price ? -1 : 1; // по убыванию
                 default: return false;
             };
         });
@@ -29,7 +28,7 @@ const PhotoBooths = () => {
             <h1>Фотобудки</h1>
             <div className="photo-booths__sort">
                 <b>Сортировка: </b>
-                <span onClick={ sortingBooths }>По возрастанию</span>
+                <span onClick={ sortingBooths }>{ isActiveSort ? 'По убыванию' : 'По возрастанию' }</span>
                 <svg className={ classNames({
                     "rotate": isActiveSort,
                     "": !isActiveSort,

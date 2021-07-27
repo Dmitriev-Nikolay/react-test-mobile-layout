@@ -2,10 +2,8 @@ import React from 'react';
 
 import { PhotoBooths, FaqsMenu, News } from '../components';
 
-const Home = React.memo(() => {
-
+const Home = () => {
     return (
-
         <div className="content">
             <div className="container">
                 <PhotoBooths />
@@ -14,6 +12,6 @@ const Home = React.memo(() => {
             </div>
         </div>
     );
-});
+};
 
 export default Home;

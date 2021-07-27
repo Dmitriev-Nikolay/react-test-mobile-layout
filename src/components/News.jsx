@@ -34,7 +34,7 @@ const News = () => {
     };
 
     const handleViewMoreNews = () => {
-        setShowMoreNews(showMoreNews + 3) // +3 news
+        setShowMoreNews(showMoreNews + 3); // +3 news
     };
 
     return (
@@ -68,7 +68,7 @@ const News = () => {
                     visible={ visibleCurrentNews } 
                     setVisible={ setVisibleCurentNews }
                 >
-                    <Sliders sliderImgs={ sliderImgsNews } />
+                    <Sliders sliderImgs={ sliderImgsNews } className={ visibleCurrentNews ? 'image-gallery-bullets' : 'news' }/>
                     <div className="current-news">
                         <div className="current-news__block-title-date">
                             <p className="current-news__title">Фотобудка</p>
