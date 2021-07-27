@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-test-mobile-layout/static/css/main.9142a27f.chunk.css",
-    "main.js": "/react-test-mobile-layout/static/js/main.663610d3.chunk.js",
-    "main.js.map": "/react-test-mobile-layout/static/js/main.663610d3.chunk.js.map",
+    "main.css": "/react-test-mobile-layout/static/css/main.e69bc92d.chunk.css",
+    "main.js": "/react-test-mobile-layout/static/js/main.ed9d00cc.chunk.js",
+    "main.js.map": "/react-test-mobile-layout/static/js/main.ed9d00cc.chunk.js.map",
     "runtime-main.js": "/react-test-mobile-layout/static/js/runtime-main.e4c337e6.js",
     "runtime-main.js.map": "/react-test-mobile-layout/static/js/runtime-main.e4c337e6.js.map",
-    "static/js/2.06437ba7.chunk.js": "/react-test-mobile-layout/static/js/2.06437ba7.chunk.js",
-    "static/js/2.06437ba7.chunk.js.map": "/react-test-mobile-layout/static/js/2.06437ba7.chunk.js.map",
+    "static/js/2.6b3e198f.chunk.js": "/react-test-mobile-layout/static/js/2.6b3e198f.chunk.js",
+    "static/js/2.6b3e198f.chunk.js.map": "/react-test-mobile-layout/static/js/2.6b3e198f.chunk.js.map",
     "index.html": "/react-test-mobile-layout/index.html",
-    "static/css/main.9142a27f.chunk.css.map": "/react-test-mobile-layout/static/css/main.9142a27f.chunk.css.map",
-    "static/js/2.06437ba7.chunk.js.LICENSE.txt": "/react-test-mobile-layout/static/js/2.06437ba7.chunk.js.LICENSE.txt",
+    "static/css/main.e69bc92d.chunk.css.map": "/react-test-mobile-layout/static/css/main.e69bc92d.chunk.css.map",
+    "static/js/2.6b3e198f.chunk.js.LICENSE.txt": "/react-test-mobile-layout/static/js/2.6b3e198f.chunk.js.LICENSE.txt",
     "static/media/app.scss": "/react-test-mobile-layout/static/media/phone.aadd686b.svg",
     "static/media/bg-video.eb60e4ff.png": "/react-test-mobile-layout/static/media/bg-video.eb60e4ff.png",
     "static/media/current-news.975d06d4.png": "/react-test-mobile-layout/static/media/current-news.975d06d4.png",
@@ -17,15 +17,15 @@
     "static/media/main_logo.7310d6f0.svg": "/react-test-mobile-layout/static/media/main_logo.7310d6f0.svg",
     "static/media/mask.68bb6ba7.svg": "/react-test-mobile-layout/static/media/mask.68bb6ba7.svg",
     "static/media/news.9f386ccc.jpg": "/react-test-mobile-layout/static/media/news.9f386ccc.jpg",
-    "static/media/photo.fa114386.png": "/react-test-mobile-layout/static/media/photo.fa114386.png",
+    "static/media/photo.05b1ddea.jpg": "/react-test-mobile-layout/static/media/photo.05b1ddea.jpg",
     "static/media/photo.fa5964df.svg": "/react-test-mobile-layout/static/media/photo.fa5964df.svg",
     "static/media/ticket.93a0efca.svg": "/react-test-mobile-layout/static/media/ticket.93a0efca.svg",
     "static/media/up.1e94cd85.svg": "/react-test-mobile-layout/static/media/up.1e94cd85.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.e4c337e6.js",
-    "static/js/2.06437ba7.chunk.js",
-    "static/css/main.9142a27f.chunk.css",
-    "static/js/main.663610d3.chunk.js"
+    "static/js/2.6b3e198f.chunk.js",
+    "static/css/main.e69bc92d.chunk.css",
+    "static/js/main.ed9d00cc.chunk.js"
   ]
 }
