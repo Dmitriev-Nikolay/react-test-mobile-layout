@@ -2,9 +2,7 @@ import React from 'react';
 
 import { CheckboxOptionTypes, RadioOptionTimes } from '../components';
 
-const Options = React.memo((props) => {
-    const { optionsTypes, optionsTimes, idPhotoBooths, priceCurrentBooth, selectedOptions, setSelectedOptions, getTotalPrice } = props;
-
+const Options = React.memo(({ optionsTypes, optionsTimes, idPhotoBooths, priceCurrentBooth, selectedOptions, setSelectedOptions, getTotalPrice }) => {
     return (
         <div className="block-options">
             <h6 className="block-options__title">Доп. опции</h6>

@@ -2,14 +2,10 @@ import React from "react";
 
 import { LoadableImage } from '../components';
 
-const CheckboxOptionTypes = React.memo((props) => {
-    const { optionTypesId, optionTypesImgSrc, optionTypesTitle, optionTypesPrice, idPhotoBooths, calcTotalPrice, setSelectedOptions, selectedOptions } = props;
-    
+const CheckboxOptionTypes = React.memo(({ optionTypesId, optionTypesImgSrc, optionTypesTitle, optionTypesPrice, idPhotoBooths, calcTotalPrice, setSelectedOptions, selectedOptions }) => {    
     const [isChecked, setIsChecked] = React.useState(false);
 
-    const changeCheckbox = () => {
-        setIsChecked(!isChecked);
-    };
+    const changeCheckbox = () => setIsChecked(!isChecked);
 
     const selectCurrentOption = (optionTypesId, optionTypesPrice, optionTypesTitle, isChecked) => {
         const selectOption = {
@@ -26,9 +22,7 @@ const CheckboxOptionTypes = React.memo((props) => {
         setSelectedOptions(selectedOptions);
     };
 
-    const getFinalPriceBooth = (price, check, title, type) => {
-        calcTotalPrice(price, check, title, type);
-    };
+    const getFinalPriceBooth = (price, check, title, type) => calcTotalPrice(price, check, title, type);
 
     const classStyles = {
         containerImg: 'container-img-options',

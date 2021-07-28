@@ -3,39 +3,8 @@ import React from 'react';
 import { Sliders, Options, Popup, SelectOptionsTimes } from '../components';
 
 import data from '../data';
-import photo from '../assets/img/photo.jpg';
 
-const sliderImgs = [
-    {
-        original: photo,
-        originalWidth: 328,
-        originalHeight: 240,
-    },
-    {
-        original: photo,
-        originalWidth: 328,
-        originalHeight: 240,
-    },
-    {
-        original: photo,
-        originalWidth: 328,
-        originalHeight: 240,
-    },
-    {
-        original: photo,
-        originalWidth: 328,
-        originalHeight: 240,
-    },
-    {
-        original: photo,
-        originalWidth: 328,
-        originalHeight: 240,
-    }
-];
-
-const PhotoBooth = React.memo((props) => {
-    const { photoBoothsId, title, size, price, number } = props;
-
+const PhotoBooth = React.memo(({ photoBoothsId, title, size, price, number }) => {
     const [isOpenOrderForm, setIsOpenOrderForm] = React.useState(false); // default hidden
     const [finalPriceObj, setFinalPriceObj] = React.useState(null);
     const [finalPrice, setFinalPrice] = React.useState(price + data.allOptions.optionsTimes[0].price);
@@ -89,7 +58,7 @@ const PhotoBooth = React.memo((props) => {
 
     return (
         <div className="photo-booth">
-            <Sliders sliderImgs={ sliderImgs }/>
+            <Sliders sliderImgs={ data.sliderData.sliderImgs }/>
             <div className="photo-booth__desc">
                 <h3 className="title">{ title } № { number }</h3>
                 <p className="size">Размер: <span className="size__value">{ size }</span></p>

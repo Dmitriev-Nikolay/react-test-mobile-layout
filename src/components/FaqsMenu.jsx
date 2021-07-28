@@ -2,20 +2,9 @@ import React from 'react';
 
 import { FaqsItem } from '../components';
 
+import data from '../data';
+
 const FaqsMenu = () => {
-
-    const accordionData = {
-        title: 'Какой реквизит идет в комплекте?',
-        content: `Какой то текст для заголовка Какой 
-        то текст для заго Какой то текст для заголовка 
-        Какой то текст для загоКакой то текст для заголовка 
-        Какой то текст для заго Какой то текст для заголовка 
-        Какой то текст для загоКакой то текст для заголовка 
-        Какой то текст для заго`
-    };
-
-    const { title, content } = accordionData;
-
     return (
         <div className="faqs">
             <p>Почему выбирают нас?</p>
@@ -26,8 +15,8 @@ const FaqsMenu = () => {
                         return (
                                 <FaqsItem 
                                     key={ index + Math.random() ** 2 } 
-                                    title={ title } 
-                                    content={ content } 
+                                    title={ data.accordionData.title } 
+                                    content={ data.accordionData.content } 
                                 />
                         )
                     })

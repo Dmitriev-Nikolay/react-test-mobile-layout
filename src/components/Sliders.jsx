@@ -1,9 +1,7 @@
 import React from 'react';
 import ImageGallery from 'react-image-gallery';
 
-const Sliders = React.memo((props) => {
-    const { sliderImgs } = props;
-    
+const Sliders = React.memo(({ sliderImgs }) => {    
     return (
         <>
             <ImageGallery

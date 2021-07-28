@@ -3,10 +3,9 @@ import classNames from 'classnames';
 
 import { PhotoBooth } from '../components';
 
-import data from '../data'; // || React.useEffect -> axios -> get -> data
+import data from '../data';
 
 const PhotoBooths = () => {
-    
     const [isActiveSort, setIsActiveSort] = React.useState(false);
     const [sortBooths, setSortableBooths] = React.useState(data.allPhotoBooths.booths);
 

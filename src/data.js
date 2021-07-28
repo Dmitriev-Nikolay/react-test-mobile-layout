@@ -1,4 +1,5 @@
 import photo from './assets/img/photo.jpg';
+import currentNews from './assets/img/current-news.jpg';
 
 const data = {
     allNews: {
@@ -123,8 +124,8 @@ const data = {
                 title: 'Фотобудки, GIF стойка',
                 desc: 'У нас есть широчайший ассортимент фотобудок на все случаи жизни',
                 date: '20 июля 2021',
-            }
-        ]
+            },
+        ],
     },
     allPhotoBooths: {
         booths: [
@@ -404,7 +405,62 @@ const data = {
                 title: 'выставка 3 дня',
                 price: 36000,
             },
-        ]
+        ],
+    },
+    sliderData: {
+        sliderImgs: [
+            {
+                original: photo,
+                originalWidth: 328,
+                originalHeight: 240,
+            },
+            {
+                original: photo,
+                originalWidth: 328,
+                originalHeight: 240,
+            },
+            {
+                original: photo,
+                originalWidth: 328,
+                originalHeight: 240,
+            },
+            {
+                original: photo,
+                originalWidth: 328,
+                originalHeight: 240,
+            },
+            {
+                original: photo,
+                originalWidth: 328,
+                originalHeight: 240,
+            },
+        ],
+        sliderImgsNews: [
+            {
+                original: currentNews,
+            },
+            {
+                original: currentNews,
+            },
+            {
+                original: currentNews,
+            },
+            {
+                original: currentNews,
+            },
+            {
+                original: currentNews,
+            }
+        ],
+    },
+    accordionData: {
+        title: 'Какой реквизит идет в комплекте?',
+        content: `Какой то текст для заголовка Какой 
+        то текст для заго Какой то текст для заголовка 
+        Какой то текст для загоКакой то текст для заголовка 
+        Какой то текст для заго Какой то текст для заголовка 
+        Какой то текст для загоКакой то текст для заголовка 
+        Какой то текст для заго`
     },
 };
 

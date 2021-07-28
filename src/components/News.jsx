@@ -2,40 +2,15 @@ import React from 'react';
 
 import { NewsItem, Popup, Sliders } from '../components';
 
-import data from '../data.js'; // || React.useEffect -> axios -> get -> data
-import currentNews from '../assets/img/current-news.jpg';
-
-const sliderImgsNews = [
-    {
-        original: currentNews,
-    },
-    {
-        original: currentNews,
-    },
-    {
-        original: currentNews,
-    },
-    {
-        original: currentNews,
-    },
-    {
-        original: currentNews,
-    }
-];
+import data from '../data.js';
 
 const News = () => {
-
     const [showMoreNews, setShowMoreNews] = React.useState(data.allNews.visibleAmountOfNews); // 3 default
     const [visibleCurrentNews, setVisibleCurentNews] = React.useState(false); // default hidden
 
-    const handleViewCurrentNews = () => {
-        console.log('visible current news');
-        setVisibleCurentNews(true) // visible on
-    };
+    const handleViewCurrentNews = () => setVisibleCurentNews(true) // visible on
 
-    const handleViewMoreNews = () => {
-        setShowMoreNews(showMoreNews + 3); // +3 news
-    };
+    const handleViewMoreNews = () => setShowMoreNews(showMoreNews + 3); // +3 news
 
     return (
         <div className="news">
@@ -63,12 +38,12 @@ const News = () => {
                 <button className="news__show-more-btn" onClick={ handleViewMoreNews }>Показать еще</button>
             }
             { 
-                visibleCurrentNews &&  
+                visibleCurrentNews &&
                 <Popup 
                     visible={ visibleCurrentNews } 
                     setVisible={ setVisibleCurentNews }
                 >
-                    <Sliders sliderImgs={ sliderImgsNews } className={ visibleCurrentNews ? 'image-gallery-bullets' : 'news' }/>
+                    <Sliders sliderImgs={ data.sliderData.sliderImgsNews } className={ visibleCurrentNews ? 'image-gallery-bullets' : 'news' }/>
                     <div className="current-news">
                         <div className="current-news__block-title-date">
                             <p className="current-news__title">Фотобудка</p>

@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Popup = ({ setVisible, children }) => {
-    
     const closePopup = () => {
         setVisible(false); // visible off
         document.body.style.overflow = "scroll"; // return the scroll

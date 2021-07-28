@@ -4,8 +4,7 @@ import { LoadableImage } from '../components';
 
 import news from '../assets/img/news.jpg';
 
-const NewsItem = React.memo((props) => {
-    const { type, title, desc, date, newsNumber, clickForView } = props;
+const NewsItem = React.memo(({ type, title, desc, date, newsNumber, clickForView }) => {
 
     const view = () => {
         clickForView();

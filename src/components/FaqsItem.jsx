@@ -1,14 +1,10 @@
 import React from 'react';
 import classNames from 'classnames';
 
-const FaqsItem = React.memo((props) => {
-    const { title, content } = props;
-
+const FaqsItem = React.memo(({ title, content }) => {
     const [isActive, setIsActive] = React.useState(false);
-
-    const viewFaqItem = () => {
-        setIsActive(!isActive);
-    };
+    
+    const viewFaqItem = () => setIsActive(!isActive);
 
     return (
         <div className="faqs__items__item">
