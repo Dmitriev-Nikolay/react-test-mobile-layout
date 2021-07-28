@@ -1,27 +1,15 @@
 @import "/src/scss/variables";
+@import "/src/scss/libs/mixins";
 
 .faqs {
     margin-bottom: 60px;
 
     p {
-        font-family: "WorkSans Regular";
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 19px;
-        letter-spacing: 0em;
-        text-align: left;
-        color: $red;
+        @include font-base("WorkSans Regular", 16px, normal, 400, 19px, left, $red);
     }
 
     h1 {
-        font-family: "Roboto Slab Regular";
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 42px;
-        letter-spacing: 0em;
-        text-align: left;
+        @include font-base("Roboto Slab Regular", 32px, normal, 700, 42px, left);
     }
 
     &__items {
@@ -29,19 +17,17 @@
 
         &__item {
             &__title {
+                @include font-base("WorkSans Regular", 16px, normal, 500, 19px, left, $black, 6px 0);
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                cursor: pointer;
                 padding: 15px 8px;
-                margin: 6px 0;
                 box-shadow: 0 0 25px 10px $light-grey;
                 user-select: none;
                 border-radius: 5px;
 
                 &:hover {
                     background: $light-grey;
-                    color: $red;
                     border-radius: 5px;
                 }
 
@@ -52,17 +38,6 @@
                     box-shadow: 0;
                 }
 
-                div {
-                    letter-spacing: 20px;
-                    font-family: "WorkSans Regular";
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: 19px;
-                    letter-spacing: 0em;
-                    text-align: left;
-                }
-
                 svg {
                     transform: rotate(0);
 
@@ -71,7 +46,7 @@
                     }
                 }
             }
-            
+
             &__content {
                 padding: 0 9px;
                 user-select: none;
@@ -79,6 +54,5 @@
                 border-left: 1px solid $red;
             }
         }
-
     }
 }

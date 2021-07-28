@@ -1,0 +1,12 @@
+@import "/src/scss/variables";
+
+@mixin font-base($family: "WorkSans Regular", $size, $style, $weight, $height, $align, $color: $black, $margin: 0) {
+    font-family: $family;
+    font-size: $size;
+    font-style: $style;
+    font-weight: $weight;
+    line-height: $height;
+    text-align: $align;
+    color: $color;
+    margin: $margin;
+}

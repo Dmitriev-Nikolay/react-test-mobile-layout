@@ -38,7 +38,7 @@ const PhotoBooth = React.memo((props) => {
 
     const [isOpenOrderForm, setIsOpenOrderForm] = React.useState(false); // default hidden
     const [finalPriceObj, setFinalPriceObj] = React.useState(null);
-    const [finalPrice, setFinalPrice] = React.useState(0);
+    const [finalPrice, setFinalPrice] = React.useState(price + data.allOptions.optionsTimes[0].price);
     const [selectedOptions, setSelectedOptions] = React.useState([]);
     const [selectedTime, setSelectedTime] = React.useState(null);
 

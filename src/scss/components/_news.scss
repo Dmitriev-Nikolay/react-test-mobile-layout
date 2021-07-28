@@ -1,25 +1,13 @@
 @import "/src/scss/variables";
+@import "/src/scss/libs/mixins";
 
 .news {
     &__why-choose-us {
-        font-family: "WorkSans Regular";
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 19px;
-        letter-spacing: 0em;
-        text-align: left;
-        color: $red;
+        @include font-base("WorkSans Regular", 16px, normal, 400, 19px, left, $red);
     }
 
     &__faq {
-        font-family: "Roboto Slab Regular";
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 42px;
-        letter-spacing: 0em;
-        text-align: left;
+        @include font-base("Roboto Slab Regular", 32px, normal, 700, 42px, left);
     }
 
     &__items {
@@ -28,20 +16,12 @@
     }
 
     &__show-more-btn {
+        @include font-base("Roboto", 18px, normal, 700, 18px, center, $red, 50px 0 0 0);
         min-width: 100%;
         min-height: 40px;
-        color: $red;
         border: 1px solid $red;
         border-radius: 5px;
         background: $white;
-        font-family: "Roboto";
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 18px;
-        letter-spacing: 0em;
-        text-align: center;
-        margin-top: 50px;
 
         &:hover {
             background: $dark-red;
@@ -85,48 +65,19 @@
     }
 
     &__type {
-        font-family: "WorkSans Regular";
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 14px;
-        letter-spacing: 0em;
-        text-align: left;
-        color: $red;
-        margin-bottom: 4px;
+        @include font-base("WorkSans Regular", 12px, normal, 500, 14px, left, $red, 0 0 4px 0);
     }
 
     &__title {
-        font-family: "WorkSans Regular";
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 23px;
-        letter-spacing: 0em;
-        text-align: left;
-        margin-bottom: 8px;
+        @include font-base("WorkSans Regular", 20px, normal, 600, 23px, left, $black, 0 0 8px 0);
     }
 
     &__desc {
-        font-family: "WorkSans Regular";
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 14px;
-        letter-spacing: 0em;
-        text-align: justify;
-        margin-bottom: 20px;
+        @include font-base("WorkSans Regular", 12px, normal, 500, 14px, justify, $black, 0 0 20px 0);
     }
 
     &__date {
-        font-family: "WorkSans Regular";
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 14px;
-        letter-spacing: 0em;
-        text-align: left;
-        color: $text-secondary;
+        @include font-base("WorkSans Regular", 12px, normal, 500, 14px, left, $text-secondary);
     }
     &:last-child {
         margin: 0;

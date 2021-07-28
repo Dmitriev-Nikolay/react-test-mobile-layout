@@ -1,4 +1,5 @@
 @import "/src/scss/variables";
+@import "/src/scss/libs/mixins";
 
 .photo-booths {
     display: flex;
@@ -6,14 +7,7 @@
 
     &__sort {
         span {
-            font-family: "WorkSans Regular";
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 16px;
-            letter-spacing: 0em;
-            text-align: left;
-            color: $text-secondary;
+            @include font-base("WorkSans Regular", 14px, normal, 500, 16px, left, $text-secondary);
         }
 
         svg {

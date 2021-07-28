@@ -18,7 +18,7 @@ const FaqsItem = React.memo((props) => {
                     "faqs__items__item__title": !isActive,
                 })
                 }>
-                <div className="title">{ title }</div>
+                { title }
                 <svg className={ classNames({
                     "rotate": isActive,
                     "": !isActive,
