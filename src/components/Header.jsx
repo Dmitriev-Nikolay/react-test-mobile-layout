@@ -38,10 +38,7 @@ const Header = () => {
                     <img className="video-play" src={ videoPlay } alt="play" width="70" height="70"/>
                 </section>
                 <section className="header__main-title">
-                    <h1>
-                        <span className="colortext">Фото на</span>
-                        <span>праздник</span>
-                    </h1>
+                    <h1 className="colortext">Фото на<span>праздник</span></h1>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

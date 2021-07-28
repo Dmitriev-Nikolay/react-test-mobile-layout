@@ -12,9 +12,7 @@ const NewsItem = React.memo((props) => {
 
     return (
         <div className="news-item" onClick={ view }>
-            <div className="news-item__img">
-                <img src={ news } alt="news" width="328" height="328"/>
-            </div>
+            <img className="news-item__img" src={ news } alt="news" width="328" height="328"/>
             <div className="news-item__info-block">
                 <h6 className="news-item__type">{ type }</h6>
                 <p className="news-item__title">{ title } № { newsNumber }</p>

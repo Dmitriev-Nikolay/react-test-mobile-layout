@@ -71,19 +71,14 @@
     }
 
     &__general-title {
-        .title {
-            @include font-base("WorkSans Regular", 24px, normal, 600, 28px, justify);
-        }
+            @include font-base("WorkSans Regular", 24px, normal, 600, 28px, justify, $black, 0 0 12px 0);
     }
 
     &__description {
         @include font-base("WorkSans Regular", 16px, normal, 400, 21px, left);
         overflow-y: auto;
         overflow-x: hidden;
-
-        p {
-            padding-right: 5px;
-        }
+        padding-right: 5px;
     }
 }
 

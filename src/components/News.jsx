@@ -3,7 +3,7 @@ import React from 'react';
 import { NewsItem, Popup, Sliders } from '../components';
 
 import data from '../data.js'; // || React.useEffect -> axios -> get -> data
-import currentNews from '../assets/img/current-news.png';
+import currentNews from '../assets/img/current-news.jpg';
 
 const sliderImgsNews = [
     {
@@ -74,20 +74,16 @@ const News = () => {
                             <p className="current-news__title">Фотобудка</p>
                             <p className="current-news__date">20 Марта 2021</p>
                         </div>
-                        <div className="current-news__general-title">
-                            <h1 className="title">Название события</h1>
-                        </div>
-                        <div className="current-news__description">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Quibusdam, maxime nisi voluptatibus animi eveniet repellat
-                                esse culpa ad ipsum velit dolor quia accusamus quidem,
-                                totam repellendus corporis laborum nulla nostrum repudiandae
-                                blanditiis illo tenetur perspiciatis. Adipisci, voluptates?
-                                Velit, similique reiciendis consequuntur incidunt labore
-                                soluta impedit. Repudiandae soluta ullam quo veritatis.
-                            </p>
-                        </div>
+                        <h1 className="current-news__general-title">Название события</h1>
+                        <p className="current-news__description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Quibusdam, maxime nisi voluptatibus animi eveniet repellat
+                            esse culpa ad ipsum velit dolor quia accusamus quidem,
+                            totam repellendus corporis laborum nulla nostrum repudiandae
+                            blanditiis illo tenetur perspiciatis. Adipisci, voluptates?
+                            Velit, similique reiciendis consequuntur incidunt labore
+                            soluta impedit. Repudiandae soluta ullam quo veritatis.
+                        </p>
                     </div>
                 </Popup>         
             } 
