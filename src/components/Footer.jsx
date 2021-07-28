@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { YandexCard } from '../components';
+// import { YandexCard } from '../components';
 
 import myLogo from '../assets/img/My_logo.png';
 import upIcon from '../assets/svg/up.svg';
@@ -44,7 +44,7 @@ const Footer = () => {
                     <img src={ upIcon } alt="up" width="60" height="60"/>
                     <p>вверх</p>
                 </div>
-                <YandexCard />
+                {/* <YandexCard /> */}
             </div>
         </div>
     );
