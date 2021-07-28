@@ -112,7 +112,7 @@ const PhotoBooth = React.memo(({ photoBoothsId, title, size, price, number }) =>
                                             selectedOptions.map((option, index) => {
                                                 return (
                                                     <li key={ `${ index }_${ option.optionTypesPrice }` }>
-                                                        <p>{ option.optionTypesTitle } # { option.optionTypesId }</p>
+                                                        <p>{ option.optionTypesTitle } #{ option.optionTypesId }</p>
                                                         <span>{ option.optionTypesPrice.toLocaleString('ru-RU') } ₽</span>
                                                     </li>
                                                 )

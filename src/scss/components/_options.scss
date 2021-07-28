@@ -3,7 +3,7 @@
 
 .block-options {
     &__title {
-        @include font-base("WorkSans Regular", 12px, normal, 600, 14px, left, $red);
+        @include font-base(("WorkSans Regular", sans-serif), 12px, normal, 600, 14px, left, $red);
         position: relative;
 
         &::after {
@@ -88,11 +88,11 @@
                 }
 
                 &__type {
-                    @include font-base("WorkSans Regular", 14px, normal, 600, 18px, left);
+                    @include font-base(("WorkSans Regular", sans-serif), 14px, normal, 600, 18px, left);
                 }
 
                 &__price {
-                    @include font-base("Roboto Slab Regular", 12px, normal, 500, 18px, left, $red);
+                    @include font-base(("Roboto Slab Regular", sans-serif), 12px, normal, 500, 18px, left, $red);
                 }
             }
         }
@@ -105,7 +105,7 @@
         margin-bottom: 22px;
 
         &__title {
-            @include font-base("WorkSans Regular", 14px, normal, 400, 18px, left, #939598, 0 0 8px 0);
+            @include font-base(("WorkSans Regular", sans-serif), 14px, normal, 400, 18px, left, #939598, 0 0 8px 0);
         }
 
         &__time-values-list {
@@ -114,7 +114,7 @@
 
             div {
                 label {
-                    @include font-base("WorkSans Regular", 12px, normal, 400, 18px, left, $black, 5px 10px 5px 0);
+                    @include font-base(("WorkSans Regular", sans-serif), 12px, normal, 400, 18px, left, $black, 5px 10px 5px 0);
                     display: inline-block;
                     padding: 6px 12px;
                     border-radius: 5px;

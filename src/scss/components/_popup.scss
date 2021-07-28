@@ -17,8 +17,7 @@
 }
 
 .popup-container {
-    min-width: 320px;
-    padding: 0 12px;
+    min-width: 328px;
     max-height: 540px;
 
     &::-webkit-scrollbar {
@@ -63,19 +62,19 @@
     }
 
     &__title {
-        @include font-base("WorkSans Regular", 14px, normal, 500, 16px, left, $red);
+        @include font-base(("WorkSans Regular", sans-serif), 14px, normal, 500, 16px, left, $red);
     }
 
     &__date {
-        @include font-base("WorkSans Regular", 12px, normal, 500, 14px, right, $text-secondary);
+        @include font-base(("WorkSans Regular", sans-serif), 12px, normal, 500, 14px, right, $text-secondary);
     }
 
     &__general-title {
-            @include font-base("WorkSans Regular", 24px, normal, 600, 28px, justify, $black, 0 0 12px 0);
+        @include font-base(("WorkSans Regular", sans-serif), 24px, normal, 600, 28px, justify, $black, 0 0 12px 0);
     }
 
     &__description {
-        @include font-base("WorkSans Regular", 16px, normal, 400, 21px, left);
+        @include font-base(("WorkSans Regular", sans-serif), 16px, normal, 400, 21px, left);
         overflow-y: auto;
         overflow-x: hidden;
         padding-right: 5px;
@@ -88,10 +87,10 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 16px;
+    padding: 14px;
 
     &__title-order {
-        @include font-base("Roboto Slab Regular", 32px, normal, 700, 42px, left, $black, 0 0 32px 0);
+        @include font-base(("Roboto Slab Regular", sans-serif), 32px, normal, 700, 42px, left, $black, 0 0 32px 0);
     }
 
     &__current-options {
@@ -100,10 +99,11 @@
         &::after {
             content: "";
             display: block;
-            width: 280px;
+            width: 300px;
             height: 1px;
             background-color: #d5dae0;
             margin-top: 16px;
+            opacity: 0.7;
         }
     }
 
@@ -120,7 +120,7 @@
             justify-content: flex-start;
 
             .title {
-                @include font-base("WorkSans Regular", 14px, normal, 600, 18px, left);
+                @include font-base(("WorkSans Regular", sans-serif), 14px, normal, 600, 18px, left);
             }
 
             .size {
@@ -137,7 +137,7 @@
         }
 
         p {
-            @include font-base("WorkSans Regular", 14px, normal, 600, 18px, right);
+            @include font-base(("WorkSans Regular", sans-serif), 14px, normal, 600, 18px, right);
         }
     }
 
@@ -145,7 +145,7 @@
         margin-bottom: 30px;
 
         select {
-            @include font-base("WorkSans Regular", 16px, normal, 400, 24px, center);
+            @include font-base(("WorkSans Regular", sans-serif), 16px, normal, 400, 24px, center);
             border-radius: 5px;
             border-color: $grey;
             background: $white;
@@ -157,7 +157,7 @@
         ul {
             display: flex;
             flex-direction: column;
-            max-height: 185px;
+            max-height: 135px;
             overflow-x: hidden;
             overflow-y: auto;
             margin: 10px 0;
@@ -189,7 +189,7 @@
                 }
 
                 p {
-                    @include font-base("WorkSans Regular", 14px, normal, 600, 18px, left);
+                    @include font-base(("WorkSans Regular", sans-serif), 14px, normal, 600, 18px, left);
                 }
 
                 span {
@@ -206,11 +206,11 @@
         margin-bottom: 22px;
 
         p {
-            @include font-base("WorkSans Regular", 20px, normal, 600, 23px, left);
+            @include font-base(("WorkSans Regular", sans-serif), 20px, normal, 600, 23px, left);
         }
 
         span {
-            @include font-base("Roboto Slab Regular", 32px, normal, 500, 42px, right);
+            @include font-base(("Roboto Slab Regular", sans-serif), 32px, normal, 500, 42px, right);
         }
     }
 
@@ -235,7 +235,7 @@
             background: $light-grey;
 
             span {
-                @include font-base("WorkSans Regular", 14px, normal, 400, 16px, center);
+                @include font-base(("WorkSans Regular", sans-serif), 14px, normal, 400, 16px, center);
             }
 
             svg {

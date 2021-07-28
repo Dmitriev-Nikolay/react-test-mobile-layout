@@ -1,4 +1,5 @@
 @import "/src/scss/variables";
+@import "/src/scss/libs/mixins";
 
 .header {
     display: flex;
@@ -40,10 +41,15 @@
         flex-direction: column;
 
         .colortext {
+            @include font-base(("Roboto Slab Regular", sans-serif), 40px, normal, 700, 52px, left, $red, 0 0 20px 0);
             display: flex;
             flex-direction: column;
-            color: $red;
-            margin-bottom: 20px;
+
+            span {
+                @extend .colortext;
+                color: $black;
+                margin: 0;
+            }
         }
 
         p {
@@ -52,12 +58,16 @@
     }
 }
 
-.firsth-block__row,
-.second-block__row {
+.firsth-block__row {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 15px 37px;
+}
+
+.second-block__row {
+    @extend .firsth-block__row;
+    margin: 0 15px;
 }
 
 .firsth-block__column,

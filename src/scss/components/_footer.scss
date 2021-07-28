@@ -2,14 +2,12 @@
 @import "/src/scss/libs/mixins";
 
 .footer {
-    margin-bottom: 40px;
-
     &__info {
-        @include font-base("WorkSans Regular", 16px, normal, 500, 19px, left, $red, 0 0 4px 0);
+        @include font-base(("WorkSans Regular", sans-serif), 16px, normal, 500, 19px, left, $red, 0 0 4px 0);
     }
 
     h2 {
-        @include font-base("Roboto Slab Regular", 32px, normal, 700, 36px, left, $black, 0 0 20px 0);
+        @include font-base(("Roboto Slab Regular", sans-serif), 32px, normal, 700, 36px, left, $black, 0 0 20px 0);
     }
 
     &__contacts {
@@ -18,11 +16,29 @@
 
         li {
             p {
-                @include font-base("Roboto Slab Regular", 20px, normal, 400, 32px, left, $black, 0 0 4px 0);
+                @include font-base(
+                    ("Roboto Slab Regular", sans-serif),
+                    20px,
+                    normal,
+                    400,
+                    32px,
+                    left,
+                    $black,
+                    0 0 4px 0
+                );
             }
 
             span {
-                @include font-base("WorkSans Regular", 18px, normal, 400, 21px, left, $text-secondary, 0 0 20px 0);
+                @include font-base(
+                    ("WorkSans Regular", sans-serif),
+                    18px,
+                    normal,
+                    400,
+                    21px,
+                    left,
+                    $text-secondary,
+                    0 0 20px 0
+                );
                 display: inline-block;
             }
 
@@ -54,7 +70,7 @@
         margin-bottom: 20px;
 
         span {
-            @include font-base("Roboto Slab Regular", 20px, normal, 400, 32px, left, $black, 0 20px 0 0);
+            @include font-base(("Roboto Slab Regular", sans-serif), 20px, normal, 400, 32px, left, $black, 0 20px 0 0);
         }
 
         img {
@@ -91,7 +107,7 @@
         margin-bottom: 40px;
 
         p {
-            @include font-base("Roboto Slab Regular", 20px, normal, 400, 32px, left, $red);
+            @include font-base(("Roboto Slab Regular", sans-serif), 20px, normal, 400, 32px, left, $red);
             padding: 0 20px;
 
             &:first-child {
