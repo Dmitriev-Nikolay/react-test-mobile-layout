@@ -41,22 +41,6 @@
     transition: 0.2s;
     position: relative;
     animation: emergence-news 0.5s ease-in;
-    
-    &::after {
-        content: "";
-        position: absolute;
-        left: 8px;
-        top: 288px;
-        width: 0;
-        height: 0;
-        border-left: 20px solid transparent;
-        border-right: 20px solid transparent;
-        border-bottom: 40px solid $white;
-    }
-
-    &__img {
-        margin-bottom: 20px;
-    }
 
     &__info-block {
         display: flex;

@@ -14,6 +14,7 @@ import CheckboxOptionTypes from './CheckboxOptionTypes';
 import RadioOptionTimes from './RadioOptionTimes';
 import SelectOptionsTimes from './SelectOptionsTimes';
 import YandexCard from './YandexCard';
+import LoadableImage from './LoadableImage';
 
 export {
     Header,
@@ -32,4 +33,5 @@ export {
     RadioOptionTimes,
     SelectOptionsTimes,
     YandexCard,
+    LoadableImage
 };
