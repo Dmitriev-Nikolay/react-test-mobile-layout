@@ -32,10 +32,11 @@
     &__send {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         width: 100%;
 
         p {
-            @include font-base(("Roboto Slab Regular", sans-serif), 32px, normal, 700, 36px, left);
+            @include font-base(("Roboto Slab Regular", sans-serif), 28px, normal, 700, 32px, left);
         }
 
         button {

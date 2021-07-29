@@ -1,6 +1,6 @@
 import React from "react";
 
-import { LoadableImage } from '../components';
+// import { LoadableImage } from '../components';
 
 const CheckboxOptionTypes = React.memo(({ optionTypesId, optionTypesImgSrc, optionTypesTitle, optionTypesPrice, idPhotoBooths, calcTotalPrice, setSelectedOptions, selectedOptions }) => {    
     const [isChecked, setIsChecked] = React.useState(false);
@@ -24,18 +24,19 @@ const CheckboxOptionTypes = React.memo(({ optionTypesId, optionTypesImgSrc, opti
 
     const getFinalPriceBooth = (price, check, title, type) => calcTotalPrice(price, check, title, type);
 
-    const classStyles = {
-        containerImg: 'container-img-options',
-        containerImgLoaded: 'container-img-options--loaded',
-        img: 'options-img',
-        imgLoaded: 'options-img--loaded',
-    };
+    // const classStyles = {
+    //     containerImg: "container-img-options",
+    //     containerImgLoaded: "container-img-options--loaded",
+    //     img: "options-img",
+    //     imgLoaded: "options-img--loaded",
+    // };
 
     return (
         <div className="block-options__types__item">
             <label htmlFor={ `${ optionTypesId }_${ idPhotoBooths }` }>
                 <div className="block-info-options">
-                    <LoadableImage src={ optionTypesImgSrc } alt="booths" width="60" height="60" classStyles={ classStyles }/>
+                    {/* <LoadableImage src={ optionTypesImgSrc } alt="booths" width="60" height="60" classStyles={ classStyles }/> */}
+                    <img src={ optionTypesImgSrc } alt="booths" width="60" height="60"/>
                     <div className="item-options">
                         <p className="item-options__type">{ optionTypesTitle } #{ optionTypesId }</p>
                         <p className="item-options__price">от { optionTypesPrice.toLocaleString('ru-RU') } ₽</p>
