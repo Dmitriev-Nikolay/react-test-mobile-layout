@@ -2,6 +2,10 @@
 
 **Photobooth rent mobile application** - application for renting special photo booths for your event.
 
+## Running application
+___
+https://dmitriev-nikolay.github.io/react-test-mobile-layout/
+
 ## Application information
 ___
 + the application is created only for mobile devices (max-width 375px)

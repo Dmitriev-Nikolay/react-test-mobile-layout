@@ -438,18 +438,28 @@ const data = {
         sliderImgsNews: [
             {
                 original: currentNews,
+                originalWidth: 328,
+                originalHeight: 328,
             },
             {
                 original: currentNews,
+                originalWidth: 328,
+                originalHeight: 328,
             },
             {
                 original: currentNews,
+                originalWidth: 328,
+                originalHeight: 328,
             },
             {
                 original: currentNews,
+                originalWidth: 328,
+                originalHeight: 328,
             },
             {
                 original: currentNews,
+                originalWidth: 328,
+                originalHeight: 328,
             }
         ],
     },

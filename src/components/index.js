@@ -15,6 +15,7 @@ import RadioOptionTimes from './RadioOptionTimes';
 import SelectOptionsTimes from './SelectOptionsTimes';
 import YandexCard from './YandexCard';
 import LoadableImage from './LoadableImage';
+import PhotoBoothOrder from './PhotoBoothOrder';
 
 export {
     Header,
@@ -33,5 +34,6 @@ export {
     RadioOptionTimes,
     SelectOptionsTimes,
     YandexCard,
-    LoadableImage
+    LoadableImage,
+    PhotoBoothOrder
 };

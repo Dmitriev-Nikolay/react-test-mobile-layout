@@ -1,11 +1,11 @@
 import React from 'react';
 
-const SelectOptionsTimes = React.memo(({ optionsSelectTimes, idPhotoBooths, priceCurrentBooth, selectedTime, getTotalPrice }) => {
+const SelectOptionsTimes = React.memo(({ optionsSelectTimes, idPhotoBooths, priceCurrentBooth, selectedTime, calcTotalPrice }) => {
     const [currentValue, setCurrentValue] = React.useState(selectedTime);
 
     const handleChangeRadio = (e) => setCurrentValue(+e.target.value);
 
-    const calcTotalPrice = (price) => getTotalPrice(price);
+    const getFinalPriceBooth = (price) => calcTotalPrice(price);
 
     return (
         <select  
@@ -16,7 +16,7 @@ const SelectOptionsTimes = React.memo(({ optionsSelectTimes, idPhotoBooths, pric
                 optionsSelectTimes.map((select) => {
                     return (
                         <option
-                            onChange={ calcTotalPrice(currentValue) }
+                            onChange={ getFinalPriceBooth(currentValue) }
                             value={ select.price + priceCurrentBooth }
                             key={ `${ select.id }_${ idPhotoBooths }` }
                             id={ `${ select.id }_${ idPhotoBooths }` }

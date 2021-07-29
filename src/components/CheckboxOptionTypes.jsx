@@ -22,7 +22,7 @@ const CheckboxOptionTypes = React.memo(({ optionTypesId, optionTypesImgSrc, opti
         setSelectedOptions(selectedOptions);
     };
 
-    const getFinalPriceBooth = (price, check, title, type) => calcTotalPrice(price, check, title, type);
+    const getFinalPriceBooth = (price, check, type) => calcTotalPrice(price, check, type);
 
     // const classStyles = {
     //     containerImg: "container-img-options",
@@ -49,7 +49,7 @@ const CheckboxOptionTypes = React.memo(({ optionTypesId, optionTypesImgSrc, opti
                 value={ isChecked }
                 onClick={(e) => {
                     changeCheckbox();
-                    getFinalPriceBooth(optionTypesPrice, !isChecked, optionTypesTitle, e.currentTarget.type);
+                    getFinalPriceBooth(optionTypesPrice, !isChecked, e.currentTarget.type);
                     selectCurrentOption(optionTypesId, optionTypesPrice, optionTypesTitle, !isChecked);
                 }}
             />
