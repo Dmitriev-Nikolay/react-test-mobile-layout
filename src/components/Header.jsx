@@ -5,7 +5,7 @@ import { Logo, Popup } from '../components';
 import groupballs from '../assets/img/groupballs.png';
 import rectangle from '../assets/img/rectangle.png';
 import ellipse from '../assets/img/ellipse.png';
-import videoBackground from '../assets/img/bg-video.png';
+import videoBackground from '../assets/img/bg-video.webp';
 import videoPlay from '../assets/img/video-play.png';
 
 import mask from '../assets/svg/mask.svg';

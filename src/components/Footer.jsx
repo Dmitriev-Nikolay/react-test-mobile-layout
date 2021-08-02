@@ -1,9 +1,9 @@
-import React, { Suspense } from 'react';
+import React from 'react';
+
+import { YandexCard } from '../components';
 
 import myLogo from '../assets/img/My_logo.png';
 import upIcon from '../assets/svg/up.svg';
-
-const YandexCard = React.lazy(() => import('../components/YandexCard'));
 
 const Footer = () => {
     const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -41,9 +41,7 @@ const Footer = () => {
                     <img src={ upIcon } alt="up" width="60" height="60"/>
                     <p>вверх</p>
                 </div>
-                <Suspense fallback={ <div>Загрузка...</div> }>
-                    <YandexCard />
-                </Suspense>
+                <YandexCard />
             </div>
         </div>
     );

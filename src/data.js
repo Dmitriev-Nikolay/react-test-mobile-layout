@@ -1,5 +1,5 @@
-import photo from './assets/img/photo.jpg';
-import currentNews from './assets/img/current-news.jpg';
+import photo from './assets/img/photo.webp';
+import currentNews from './assets/img/current-news.webp';
 
 const data = {
     allNews: {

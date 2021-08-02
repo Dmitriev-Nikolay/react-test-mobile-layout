@@ -13,14 +13,12 @@ const YandexCard = () => {
 
     return (
         <YMaps>
-            <div>
-                <Map state={ mapState }>
-                    <Placemark
-                        { ...placeMark }
-                        modules={ ['geoObject.addon.balloon', 'geoObject.addon.hint'] }
-                    />
-                </Map>
-            </div>
+            <Map state={ mapState }>
+                <Placemark
+                    { ...placeMark }
+                    modules={ ['geoObject.addon.balloon', 'geoObject.addon.hint'] }
+                />
+            </Map>
         </YMaps>
     );
 };

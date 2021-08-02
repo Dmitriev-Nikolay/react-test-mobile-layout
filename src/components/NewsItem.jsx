@@ -2,7 +2,7 @@ import React from 'react';
 
 // import { LoadableImage } from '../components';
 
-import news from '../assets/img/news.jpg';
+import news from '../assets/img/news.webp';
 
 const NewsItem = React.memo(({ type, title, desc, date, newsNumber, clickForView }) => {
 

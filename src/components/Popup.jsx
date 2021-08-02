@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Popup = ({ setVisible, children }) => {
+const Popup = React.memo(({ setVisible, children }) => {
     const closePopup = () => {
         setVisible(false); // visible off
         document.body.style.overflow = "scroll"; // return the scroll
@@ -16,6 +16,6 @@ const Popup = ({ setVisible, children }) => {
             </div>
         </div>
     );
-};
+});
 
 export default Popup;
