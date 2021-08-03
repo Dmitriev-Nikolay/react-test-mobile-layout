@@ -12,7 +12,7 @@ const Popup = React.memo(({ setVisible, children }) => {
                 <div className="popup-content">
                     { children }
                 </div>
-                <span className="btn-close-popup" onClick={ closePopup }>x</span>
+                <span className="btn-close-popup" onClick={ closePopup }>х</span>
             </div>
         </div>
     );

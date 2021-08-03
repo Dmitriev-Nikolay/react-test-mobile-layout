@@ -46,6 +46,12 @@
     }
 }
 
+.colortext-small {
+    @include font-base(("WorkSans Regular", sans-serif), 16px, normal, 400, 21px, center, $red);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 @keyframes loader {
     0% {
         transform: rotate(0deg);

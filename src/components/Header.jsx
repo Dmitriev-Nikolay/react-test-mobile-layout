@@ -40,7 +40,7 @@ const Header = () => {
                 <section className="header__main-title">
                     <h1 className="colortext">Фото на<span>праздник</span></h1>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        Lorem ipsum dolor sit amet, consectetur <span className="colortext-small">adipiscing elit</span>,
                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </p>
                 </section>
@@ -52,7 +52,7 @@ const Header = () => {
                                     <div>
                                         <img src={ infiniti } alt="infiniti" width="42" height="21"/>
                                     </div>
-                                    <p>Безлимитная печать фото</p>
+                                    <p>Безлимитная<br />печать фото</p>
                                 </div>
                             </div>
                             <div className="firsth-block__column">
@@ -60,7 +60,7 @@ const Header = () => {
                                     <div>
                                         <img src={ mask } alt="mask" width="48" height="48"/>
                                     </div>    
-                                    <p>Фотореквизит в наличии</p>
+                                    <p>Фотореквизит<br />в наличии</p>
                                 </div>
                             </div>
                         </div>
@@ -72,7 +72,7 @@ const Header = () => {
                                     <div>
                                         <img src={ photo } alt="cards" width="41" height="34"/>
                                     </div>
-                                    <p>Фотоотчет в электронном виде</p>
+                                    <p>Фотоотчет в<br />электронном виде</p>
                                 </div>
                             </div>
                             <div className="second-block__column">
@@ -80,7 +80,7 @@ const Header = () => {
                                     <div>
                                         <img src={ ticket } alt="ticket" width="35" height="35"/>
                                     </div>
-                                    <p>Цены ниже рынка</p>
+                                    <p>Цены<br />ниже рынка</p>
                                 </div>
                             </div>
                         </div>

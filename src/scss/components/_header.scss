@@ -53,7 +53,8 @@
         }
 
         p {
-            line-height: 21px;
+            @include font-base(("WorkSans Regular", sans-serif), 16px, normal, 400, 21px, left);
+            min-height: 81px;
         }
     }
 }
@@ -91,12 +92,7 @@
     }
 
     p {
-        font-size: 14px;
-        font-weight: 600;
-        line-height: 16px;
-        max-width: 117px;
-        letter-spacing: 0em;
-        text-align: center;
+        @include font-base(("Roboto", sans-serif), 14px, normal, 600, 16px, center);
     }
 }
 

@@ -196,6 +196,10 @@
                     @extend p;
                 }
             }
+
+            p {
+                @include font-base(("WorkSans Regular", sans-serif), 14px, normal, 600, 18px, center);
+            }
         }
     }
 

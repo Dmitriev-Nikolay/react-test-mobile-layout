@@ -16,7 +16,7 @@
             @include font-base(("WorkSans Regular", sans-serif), 14px, normal, 500, 16px, left);
         }
         span {
-            @include font-base(("WorkSans Regular", sans-serif), 14px, normal, 500, 16px, left, $text-secondary);
+            @include font-base(("WorkSans Regular", sans-serif), 14px, normal, 500, 16px, left, $grey);
         }
 
         svg {

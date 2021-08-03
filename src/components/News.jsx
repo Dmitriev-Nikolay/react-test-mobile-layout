@@ -51,13 +51,14 @@ const News = () => {
                         </div>
                         <h1 className="current-news__general-title">Название события</h1>
                         <p className="current-news__description">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Quibusdam, maxime nisi voluptatibus animi eveniet repellat
-                            esse culpa ad ipsum velit dolor quia accusamus quidem,
-                            totam repellendus corporis laborum nulla nostrum repudiandae
-                            blanditiis illo tenetur perspiciatis. Adipisci, voluptates?
-                            Velit, similique reiciendis consequuntur incidunt labore
-                            soluta impedit. Repudiandae soluta ullam quo veritatis.
+                            Lorem ipsum dolor sit amet, consectetur <span className="colortext-small"> adipiscing elit</span>, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna 
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                            Duis aute irure dolor in reprehenderit in voluptate velit 
+                            esse cillum dolore eu fugiat nulla pariatur. Excepteur 
+                            sint occaecat cupidatat non proident, sunt in culpa qui 
+                            officia deserunt mollit anim id est laborum.
                         </p>
                     </div>
                 </Popup>         

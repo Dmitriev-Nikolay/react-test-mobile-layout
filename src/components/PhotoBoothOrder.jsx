@@ -15,18 +15,14 @@ const PhotoBoothOrder = React.memo(({ photoBoothsId, title, size, price, number,
 
     return (
         <div className="current-booth-for-order">
-            <div className="current-booth-for-order__title-order">
-                <p>Ваша заявка</p>
-            </div>
+            <div className="current-booth-for-order__title-order">Ваша заявка </div>
             <div className="current-booth-for-order__current-options">
                 <div className="current-booth-for-order__booth-info">
                     <div>
                         <p className="title">{ title } № { number }</p>
                         <p className="size">Размер: <span className="value-size">{ size }</span></p>
                     </div>
-                    <div>
-                        <p>{ price.toLocaleString('ru-RU') } ₽</p>
-                    </div>
+                    <p>{ price.toLocaleString('ru-RU') } ₽</p>
                 </div>
                 <div className="current-booth-for-order__booth-times">
                     <SelectOptionsTimes
@@ -49,9 +45,7 @@ const PhotoBoothOrder = React.memo(({ photoBoothsId, title, size, price, number,
                                         </li>
                                     )
                                 })
-                                : <li>
-                                    <p>Тебе стоит добавить доп. опции 😢</p>
-                                </li>
+                                : <p>Тебе стоит добавить доп. опции 😢</p>
                         }
                     </ul>
                 </div>

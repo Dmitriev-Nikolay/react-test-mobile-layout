@@ -24,18 +24,10 @@ const CheckboxOptionTypes = React.memo(({ optionTypesId, optionTypesImgSrc, opti
 
     const getFinalPriceBooth = (price, check, type) => calcTotalPrice(price, check, type);
 
-    // const classStyles = {
-    //     containerImg: "container-img-options",
-    //     containerImgLoaded: "container-img-options--loaded",
-    //     img: "options-img",
-    //     imgLoaded: "options-img--loaded",
-    // };
-
     return (
         <div className="block-options__types__item">
             <label htmlFor={ `${ optionTypesId }_${ idPhotoBooths }` }>
                 <div className="block-info-options">
-                    {/* <LoadableImage src={ optionTypesImgSrc } alt="booths" width="60" height="60" classStyles={ classStyles }/> */}
                     <img src={ optionTypesImgSrc } alt="booths" width="60" height="60"/>
                     <div className="item-options">
                         <p className="item-options__type">{ optionTypesTitle } #{ optionTypesId }</p>
