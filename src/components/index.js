@@ -1,5 +1,4 @@
 import Header from './Header';
-import Logo from './Logo';
 import Footer from './Footer';
 import PhotoBooths from './PhotoBooths';
 import PhotoBooth from './PhotoBooth';
@@ -18,7 +17,6 @@ import PhotoBoothOrder from './PhotoBoothOrder';
 
 export {
     Header,
-    Logo,
     Footer,
     PhotoBooths,
     PhotoBooth,

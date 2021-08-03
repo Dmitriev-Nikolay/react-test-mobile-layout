@@ -26,13 +26,11 @@ const CheckboxOptionTypes = React.memo(({ optionTypesId, optionTypesImgSrc, opti
 
     return (
         <div className="block-options__types__item">
-            <label htmlFor={ `${ optionTypesId }_${ idPhotoBooths }` }>
-                <div className="block-info-options">
-                    <img src={ optionTypesImgSrc } alt="booths" width="60" height="60"/>
-                    <div className="item-options">
-                        <p className="item-options__type">{ optionTypesTitle } #{ optionTypesId }</p>
-                        <p className="item-options__price">от { optionTypesPrice.toLocaleString('ru-RU') } ₽</p>
-                    </div>
+            <label className="block-info-options" htmlFor={ `${ optionTypesId }_${ idPhotoBooths }` }>
+                <img src={ optionTypesImgSrc } alt="booths" width="60" height="60"/>
+                <div className="item-options">
+                    <p className="item-options__type">{ optionTypesTitle } #{ optionTypesId }</p>
+                    <p className="item-options__price">от { optionTypesPrice.toLocaleString('ru-RU') } ₽</p>
                 </div>
             </label>
             <input

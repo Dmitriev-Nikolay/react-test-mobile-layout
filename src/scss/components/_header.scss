@@ -71,13 +71,9 @@
     margin: 0 15px;
 }
 
-.firsth-block__column,
-.second-block__column {
-    flex: 0 1 50%;
-}
-
 .firsth-block__item,
 .second-block__item {
+    flex: 0 1 50%;
     min-width: 156px;
     min-height: 84px;
     display: flex;
