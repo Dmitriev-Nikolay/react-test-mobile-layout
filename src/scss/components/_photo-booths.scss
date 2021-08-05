@@ -4,6 +4,7 @@
 .photo-booths {
     display: flex;
     flex-direction: column;
+    margin-bottom: 62px;
 
     h1 {
         @include font-base(("Roboto Slab Regular", sans-serif), 32px, normal, 700, 42px, left, $black, 0 0 20px 0);

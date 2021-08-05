@@ -13,11 +13,11 @@ const FaqsMenu = () => {
                 {
                     Array.from(Array(5)).map((_, index) => {
                         return (
-                                <FaqsItem 
-                                    key={ index + Math.random() ** 2 } 
-                                    title={ data.accordionData.title } 
-                                    content={ data.accordionData.content } 
-                                />
+                            <FaqsItem 
+                                key={ index + Math.random() ** 2 } 
+                                title={ data.accordionData.title } 
+                                content={ data.accordionData.content } 
+                            />
                         )
                     })
                 }

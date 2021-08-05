@@ -12,19 +12,23 @@
 
     &__contacts {
         list-style: none;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
 
         li {
+            margin-bottom: 20px;
+
             p {
                 @include font-base(("Roboto Slab Regular", sans-serif), 20px, normal, 400, 32px, left, $black, 0 0 4px 0);
             }
 
             span {
-                @include font-base(("WorkSans Regular", sans-serif), 18px, normal, 400, 21px, left, $text-secondary, 0 0 20px 0);
+                @include font-base(("WorkSans Regular", sans-serif), 18px, normal, 400, 21px, left, $text-secondary);
                 display: inline-block;
             }
 
             &:last-child {
+                margin: 0;
+
                 p {
                     @extend p;
                 }
@@ -50,6 +54,7 @@
         align-items: center;
         justify-content: flex-start;
         margin-bottom: 20px;
+        // @include font-base(("Roboto Slab Regular", sans-serif), 20px, normal, 400, 32px, left, $black, 0 20px 0 0);
 
         span {
             @include font-base(("Roboto Slab Regular", sans-serif), 20px, normal, 400, 32px, left, $black, 0 20px 0 0);

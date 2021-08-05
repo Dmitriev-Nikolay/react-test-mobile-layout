@@ -8,7 +8,7 @@ const RadioOptionTimes = React.memo(({ indexForDefaultChecked, optionTimesId, op
     const getFinalPriceBooth = (price, check, type) => calcTotalPrice(price, check, type);
 
     return (
-        <div>
+        <>
             <input
                 defaultChecked={ indexForDefaultChecked === 0 }
                 id={ `${ optionTimesId }_${ idPhotoBooths }` }
@@ -21,7 +21,7 @@ const RadioOptionTimes = React.memo(({ indexForDefaultChecked, optionTimesId, op
             <label htmlFor={ `${ optionTimesId }_${ idPhotoBooths }` }>
                 { optionTimesTitle }
             </label>
-        </div>
+        </>
     );
 });
 

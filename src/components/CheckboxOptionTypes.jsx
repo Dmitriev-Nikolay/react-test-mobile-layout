@@ -1,7 +1,5 @@
 import React from "react";
 
-// import { LoadableImage } from '../components';
-
 const CheckboxOptionTypes = React.memo(({ optionTypesId, optionTypesImgSrc, optionTypesTitle, optionTypesPrice, idPhotoBooths, calcTotalPrice, setSelectedOptions, selectedOptions }) => {    
     const [isChecked, setIsChecked] = React.useState(false);
 

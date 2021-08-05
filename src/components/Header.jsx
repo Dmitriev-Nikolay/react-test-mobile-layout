@@ -49,29 +49,21 @@ const Header = () => {
                 <section className="header__features-body">
                     <div className="firsth-block__row">
                         <div className="firsth-block__item">
-                            <div>
-                                <img src={ infiniti } alt="infiniti" width="42" height="21"/>
-                            </div>
+                            <img src={ infiniti } alt="infiniti" width="42" height="21"/>
                             <p>Безлимитная<br />печать фото</p>
                         </div>
                         <div className="firsth-block__item">
-                            <div>
-                                <img src={ mask } alt="mask" width="48" height="48"/>
-                            </div>    
+                            <img src={ mask } alt="mask" width="48" height="48"/>
                             <p>Фотореквизит<br />в наличии</p>
                         </div>
                     </div>
                     <div className="second-block__row">
                         <div className="second-block__item">
-                            <div>
-                                <img src={ photo } alt="cards" width="41" height="34"/>
-                            </div>
+                            <img src={ photo } alt="cards" width="41" height="34"/>
                             <p>Фотоотчет в<br />электронном виде</p>
                         </div>
                         <div className="second-block__item">
-                            <div>
-                                <img src={ ticket } alt="ticket" width="35" height="35"/>
-                            </div>
+                            <img src={ ticket } alt="ticket" width="35" height="35"/>
                             <p>Цены<br />ниже рынка</p>
                         </div>
                     </div>
