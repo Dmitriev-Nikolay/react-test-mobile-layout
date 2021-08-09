@@ -18,7 +18,7 @@ const NewsItem = React.memo(({ type, title, desc, date, newsNumber, clickForView
                 <h6 className="news-item__type">{ type }</h6>
                 <p className="news-item__title">{ title } № { newsNumber }</p>
                 <p className="news-item__desc">{ desc }</p>
-                <p className="news-item__date">{ date }</p>
+                <time className="news-item__date">{ date }</time>
             </div>
         </div>
     );

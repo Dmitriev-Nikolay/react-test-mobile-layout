@@ -10,24 +10,26 @@ const SelectOptionsTimes = React.memo(({ optionsSelectTimes, idPhotoBooths, pric
     }, [calcTotalPrice, currentValue]);
 
     return (
-        <select  
-            defaultValue={ selectedTime }
-            onChange={ (e) => handleChangeRadio(e) }
-        >
-            {
-                optionsSelectTimes.map((select) => {
-                    return (
-                        <option
-                            value={ select.price + priceCurrentBooth }
-                            key={ `${ select.id }_${ idPhotoBooths }` }
-                            id={ `${ select.id }_${ idPhotoBooths }` }
-                        >
-                            { select.title }
-                        </option>
-                    )
-                })
-            }
-        </select>
+        <>
+            <select  
+                defaultValue={ selectedTime }
+                onChange={ (e) => handleChangeRadio(e) }
+            >
+                {
+                    optionsSelectTimes.map((select) => {
+                        return (
+                            <option
+                                value={ select.price + priceCurrentBooth }
+                                key={ `${ select.id }_${ idPhotoBooths }` }
+                                id={ `${ select.id }_${ idPhotoBooths }` }
+                            >
+                                { select.title }
+                            </option>
+                        )
+                    })
+                }
+            </select>
+        </>
     );
 });
 

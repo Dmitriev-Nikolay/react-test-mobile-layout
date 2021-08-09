@@ -7,11 +7,11 @@ const FaqsItem = React.memo(({ title, content }) => {
     const viewFaqItem = () => setIsActive(!isActive);
 
     return (
-        <div className="faqs__items__item">
+        <>
             <div onClick={ viewFaqItem }
                 className={ classNames({
-                    "faqs__items__item__title active": isActive,
-                    "faqs__items__item__title": !isActive,
+                    "faqs__items__title active": isActive,
+                    "faqs__items__title": !isActive,
                 })
                 }>
                 { title }
@@ -37,8 +37,8 @@ const FaqsItem = React.memo(({ title, content }) => {
                     />
                 </svg>
             </div>
-            <div className="faqs__items__item__content">{ isActive && content }</div>
-        </div>
+            <div className="faqs__items__content">{ isActive && content }</div>
+        </>
     );
 });
 

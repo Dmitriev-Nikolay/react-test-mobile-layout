@@ -47,7 +47,7 @@ const News = () => {
                     <div className="current-news">
                         <div className="current-news__block-title-date">
                             <p className="current-news__title">Фотобудка</p>
-                            <p className="current-news__date">20 Марта 2021</p>
+                            <time className="current-news__date">20 Марта 2021</time>
                         </div>
                         <h1 className="current-news__general-title">Название события</h1>
                         <p className="current-news__description">
@@ -62,7 +62,7 @@ const News = () => {
                         </p>
                     </div>
                 </Popup>         
-            } 
+            }
         </div>
     );
 };

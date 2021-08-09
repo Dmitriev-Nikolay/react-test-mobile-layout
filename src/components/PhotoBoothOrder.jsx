@@ -4,13 +4,12 @@ import { SelectOptionsTimes } from '../components';
 
 import data from '../data';
 
-const PhotoBoothOrder = React.memo(({ photoBoothsId, title, size, price, number, finalPrice, selectedTime, selectedOptions, setFinalPrice, setFinalPriceObj, finalPriceObj }) => {
+const PhotoBoothOrder = React.memo(({ photoBoothsId, title, size, price, number, finalPrice, selectedTime, selectedOptions, setFinalPrice }) => {
     const calculateTotalPricePopup = (valuePriceType) => {
-        let objTimePriceSelect = finalPriceObj;
-        objTimePriceSelect.baseBoothPrice = valuePriceType;
-        setFinalPriceObj(objTimePriceSelect);
-        let allPrice = Object.values(objTimePriceSelect).reduce((allPrice, elemPrice) => allPrice += elemPrice);
-        setFinalPrice(allPrice);
+        let copyFinalPrice = finalPrice;
+        copyFinalPrice = valuePriceType;
+        copyFinalPrice += selectedOptions.reduce((acc, el) => acc += el.optionTypesPrice , 0)
+        setFinalPrice(copyFinalPrice);
     };
 
     return (
@@ -52,7 +51,7 @@ const PhotoBoothOrder = React.memo(({ photoBoothsId, title, size, price, number,
                 <p>Итого:</p>
                 <span>{ finalPrice.toLocaleString('ru-RU') } ₽</span>
             </div>
-            <form  className="current-booth-for-order__phone">
+            <form className="current-booth-for-order__phone">
                 <input type="tel" placeholder="+7 (000) 000-00-00" pattern="[\+()]*(?:\d[\s\-\.()xX]*){10,14}" required />
                 <div>
                     <span>Позвоните мне</span>

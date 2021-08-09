@@ -6,7 +6,7 @@ const RadioOptionTimes = React.memo(({ indexForDefaultChecked, optionTimesId, op
     const handleChangeRadio = (e) => setCurrentValue(+e.target.value);
 
     const getFinalPriceBooth = (price, check, type) => calcTotalPrice(price, check, type);
-
+    
     return (
         <>
             <input

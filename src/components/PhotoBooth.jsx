@@ -6,14 +6,7 @@ import data from '../data';
 
 const PhotoBooth = React.memo(({ photoBoothsId, title, size, price, number }) => {
     const [isOpenOrderForm, setIsOpenOrderForm] = React.useState(false); // default hidden
-    const [finalPriceObj, setFinalPriceObj] = React.useState({
-        baseBoothPrice: price + data.allOptions.optionsTimes[0].price,
-        allOptionsPrice: 0,
-    });
-    const [finalPrice, setFinalPrice] = React.useState(Object.values({
-        baseBoothPrice: price + data.allOptions.optionsTimes[0].price,
-        allOptionsPrice: 0,
-    }).reduce((allPrice, elemPrice) => allPrice += elemPrice), 0);
+    const [finalPrice, setFinalPrice] = React.useState(price + data.allOptions.optionsTimes[0].price);
     const [selectedOptions, setSelectedOptions] = React.useState([]);
     const [selectedTime, setSelectedTime] = React.useState(price + data.allOptions.optionsTimes[0].price);
 
@@ -23,23 +16,21 @@ const PhotoBooth = React.memo(({ photoBoothsId, title, size, price, number }) =>
     };
 
     const calculateTotalPrice = (valuePriceType, checkedCheckbox, type) => {
+        let copyFinalPrice = finalPrice;
         switch (type) {
             case 'checkbox':
-                let objTypePrice = finalPriceObj;
                 if (checkedCheckbox) {
-                    objTypePrice.allOptionsPrice += valuePriceType;
+                    copyFinalPrice += valuePriceType;
                 } else {
-                    objTypePrice.allOptionsPrice -= valuePriceType;
+                    copyFinalPrice -= valuePriceType;
                 };
-                setFinalPriceObj(objTypePrice);
-                setFinalPrice(Object.values(objTypePrice).reduce((allPrice, elemPrice) => allPrice += elemPrice));
+                setFinalPrice(copyFinalPrice);
                 break;
             case 'radio':
-                let objTimePrice = finalPriceObj;
-                objTimePrice.baseBoothPrice = valuePriceType;
+                copyFinalPrice = valuePriceType;
+                copyFinalPrice += selectedOptions.reduce((sum, selectOption) => sum += selectOption.optionTypesPrice, 0)
                 setSelectedTime(valuePriceType); // for popup select time option
-                setFinalPriceObj(objTimePrice);
-                setFinalPrice(Object.values(objTimePrice).reduce((allPrice, elemPrice) => allPrice += elemPrice));
+                setFinalPrice(copyFinalPrice);
                 break;
             default:
                 break;
@@ -82,8 +73,6 @@ const PhotoBooth = React.memo(({ photoBoothsId, title, size, price, number }) =>
                         selectedTime={ selectedTime }
                         selectedOptions={ selectedOptions }
                         setFinalPrice={ setFinalPrice }
-                        setFinalPriceObj={ setFinalPriceObj }
-                        finalPriceObj={ finalPriceObj }
                     />
                 </Popup>
             }

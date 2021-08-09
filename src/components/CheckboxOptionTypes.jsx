@@ -23,26 +23,26 @@ const CheckboxOptionTypes = React.memo(({ optionTypesId, optionTypesImgSrc, opti
     const getFinalPriceBooth = (price, check, type) => calcTotalPrice(price, check, type);
 
     return (
-        <div className="block-options__types__item">
+        <>
             <label className="block-info-options" htmlFor={ `${ optionTypesId }_${ idPhotoBooths }` }>
                 <img src={ optionTypesImgSrc } alt="booths" width="60" height="60"/>
                 <div className="item-options">
                     <p className="item-options__type">{ optionTypesTitle } #{ optionTypesId }</p>
                     <p className="item-options__price">от { optionTypesPrice.toLocaleString('ru-RU') } ₽</p>
                 </div>
+                <input
+                    id={ `${ optionTypesId }_${ idPhotoBooths }` }
+                    type="checkbox"
+                    value={ isChecked }
+                    onClick={(e) => {
+                        changeCheckbox();
+                        getFinalPriceBooth(optionTypesPrice, !isChecked, e.currentTarget.type);
+                        selectCurrentOption(optionTypesId, optionTypesPrice, optionTypesTitle, !isChecked);
+                    }}
+                />
+                <span></span>
             </label>
-            <input
-                id={ `${ optionTypesId }_${ idPhotoBooths }` }
-                type="checkbox"
-                value={ isChecked }
-                onClick={(e) => {
-                    changeCheckbox();
-                    getFinalPriceBooth(optionTypesPrice, !isChecked, e.currentTarget.type);
-                    selectCurrentOption(optionTypesId, optionTypesPrice, optionTypesTitle, !isChecked);
-                }}
-            />
-            <span></span>
-        </div>
+        </>
     );
 });
 

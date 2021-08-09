@@ -15,40 +15,37 @@
     &__items {
         position: relative;
 
-        &__item {
+        &__title {
+            @include font-base(("WorkSans Regular", sans-serif), 16px, normal, 500, 19px, left, $black, 5px 0);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 8px;
+            box-shadow: 0 0 25px 10px $light-grey;
+            user-select: none;
+            border-radius: 5px;
 
-            &__title {
-                @include font-base(("WorkSans Regular", sans-serif), 16px, normal, 500, 19px, left, $black, 5px 0);
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 15px 8px;
-                box-shadow: 0 0 25px 10px $light-grey;
-                user-select: none;
+            &.active {
+                background: $red;
+                color: $white;
                 border-radius: 5px;
-
-                &.active {
-                    background: $red;
-                    color: $white;
-                    border-radius: 5px;
-                    box-shadow: 0;
-                }
-
-                svg {
-                    transform: rotate(0);
-
-                    &.rotate {
-                        transform: rotate(180deg);
-                    }
-                }
+                box-shadow: 0;
             }
 
-            &__content {
-                @include font-base(("WorkSans Regular", sans-serif), 14px, normal, 500, 16px, left, $text-secondary, 0 0 10px 0);
-                padding: 0 9px;
-                user-select: none;
-                border-left: 1px solid $red;
+            svg {
+                transform: rotate(0);
+
+                &.rotate {
+                    transform: rotate(180deg);
+                }
             }
+        }
+
+        &__content {
+            @include font-base(("WorkSans Regular", sans-serif), 14px, normal, 500, 16px, left, $text-secondary, 0 0 10px 0);
+            padding: 0 9px;
+            user-select: none;
+            border-left: 1px solid $red;
         }
     }
 }

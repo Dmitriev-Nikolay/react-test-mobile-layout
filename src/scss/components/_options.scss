@@ -41,63 +41,63 @@
             border: 3px solid $red;
         }
 
-        &__item {
+        label {
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 8px;
             border-bottom: 1px solid $border-item-options;
             background: $background-item-options;
+        }
 
-            input[type="checkbox"] {
-                display: none;
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        span {
+            width: 15px;
+            height: 15px;
+            background-color: transparent;
+            border: 1px solid $red;
+            border-radius: 3px;
+            position: relative;
+            display: inline-block;
+        }
+
+        input[type="checkbox"]:checked + span,
+        span.checked {
+            width: 16px;
+            height: 16px;
+            border: none;
+            background-color: $red;
+            background-image: url("../../assets/svg/check.svg");
+            background-size: 100% 100%;
+        }
+
+        .block-info-options {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            img {
+                border-radius: 5px;
+            }
+        }
+
+        .item-options {
+            margin-left: 8px;
+
+            &__type,
+            &__price {
+                padding: 5px 0;
             }
 
-            span {
-                width: 15px;
-                height: 15px;
-                background-color: transparent;
-                border: 1px solid $red;
-                border-radius: 3px;
-                position: relative;
-                display: inline-block;
+            &__type {
+                @include font-base(("WorkSans Regular", sans-serif), 14px, normal, 600, 18px, left);
             }
 
-            input[type="checkbox"]:checked + span,
-            span.checked {
-                width: 16px;
-                height: 16px;
-                border: none;
-                background-color: $red;
-                background-image: url("../../assets/svg/check.svg");
-                background-size: 100% 100%;
-            }
-
-            .block-info-options {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-
-                img {
-                    border-radius: 5px;
-                }
-            }
-
-            .item-options {
-                margin-left: 8px;
-
-                &__type,
-                &__price {
-                    padding: 5px 0;
-                }
-
-                &__type {
-                    @include font-base(("WorkSans Regular", sans-serif), 14px, normal, 600, 18px, left);
-                }
-
-                &__price {
-                    @include font-base(("Roboto Slab Regular", sans-serif), 12px, normal, 500, 18px, left, $red);
-                }
+            &__price {
+                @include font-base(("Roboto Slab Regular", sans-serif), 12px, normal, 500, 18px, left, $red);
             }
         }
     }
